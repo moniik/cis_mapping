@@ -200,6 +200,12 @@ if __name__ == '__main__':
 # CIS Google Kubernetes Engine (GKE) Benchmark v1.7.0
 https://workbench.cisecurity.org/benchmarks/18949/controls
 
+# CIS Google Kubernetes Engine (GKE) Benchmark v1.5.0
+https://workbench.cisecurity.org/benchmarks/13178/controls
+
 # CIS Google Cloud Platform Foundation Benchmark v3.0.0 - 03-29-2024
 https://workbench.cisecurity.org/benchmarks/11843/controls
+
+# CIS Google Cloud Platform Foundation Benchmark v2.0.0 - 03-29-2024
+https://workbench.cisecurity.org/benchmarks/9562/controls#
 """

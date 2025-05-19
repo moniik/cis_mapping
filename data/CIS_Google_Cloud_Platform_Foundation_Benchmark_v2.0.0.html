@@ -1,0 +1,1324 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- JS script for cached pages redirection if the user is not authorized-->
+    <script  nonce="OKhU5KtL3tdgrc7eAbee7u0reXIjeUVu" >
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted || performance.getEntriesByType("navigation")[0].transferSize === 0) {
+                var domain = 'https://workbench.cisecurity.org/';
+                $.ajax({
+                    url:  "/is-authorized",
+                    type: "GET",
+                    success: function(data) {
+                        if(data.status === false) {
+                            window.history.pushState(null, "", window.location.href);
+                            window.history.back();
+                            window.history.forward();
+                            window.location = domain;
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+    <!-- End of JS script for cached pages redirection -->
+	<script src="/livewire/livewire.js?id=90730a3b0e7144480175" data-turbo-eval="false" data-turbolinks-eval="false" nonce="OKhU5KtL3tdgrc7eAbee7u0reXIjeUVu"></script><script data-turbo-eval="false" data-turbolinks-eval="false" nonce="OKhU5KtL3tdgrc7eAbee7u0reXIjeUVu">window.livewire = new Livewire({"nonce":"OKhU5KtL3tdgrc7eAbee7u0reXIjeUVu"});window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = 'cQ7yDdoVvPvbdR0xzCEmyzaojFrVDoeGOhG2erTj';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+	<title>CIS WorkBench / Benchmarks Controls</title>
+			<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="csrf-token" content="cQ7yDdoVvPvbdR0xzCEmyzaojFrVDoeGOhG2erTj">
+		<meta name="inactive_time" content="60">
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="/images/CIS_Workbench_logo.png">
+
+				<link media="all" type="text/css" rel="stylesheet" href="/css/all.css?id=65bc8bc3ac9b74f3b19b215e36712457">
+		<link media="all" type="text/css" rel="stylesheet" href="/css/tailwind.css?id=204efa673ae1dc24e73a839927aa4c63">
+
+	<!-- Google Tag Manager -->
+    <script  nonce="OKhU5KtL3tdgrc7eAbee7u0reXIjeUVu" >(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;var n=d.querySelector('[nonce]');
+            n&&j.setAttribute('nonce',n.nonce||n.getAttribute('nonce'));f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PMFL2DG');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMFL2DG" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+<div id="app" v-pre>
+		<wb-user-feedback
+		url="benchmarks/9562/controls"
+		referer-url="https://workbench.cisecurity.org/benchmarks/9562/controls"
+		route-name="benchmarks.controls"
+		is-fb-on="1"
+	></wb-user-feedback>
+			<div id="wrapper" class="  ">
+							<div id="sidebar-wrapper">
+					<div id="sidebar-actions">
+													<a href="#" class="offcanvas-slide pull-right"  aria-label="Hide side bar" rel="hide-sidebar"><span class="fa fa-caret-square-o-left"></span></a>
+							<a href="#" class="offcanvas-slide pull-right" rel="show-sidebar" style="display: none;"><span class="fa fa-caret-square-o-right"></span></a>
+												<div class="clearfix"></div>
+					</div>
+					<div id="sidebar-inner">
+						<div id="sidebar-content">
+								<a href="https://workbench.cisecurity.org/communities/48" class="block flex hover:no-underline">
+        <span class="fa fa-3x fa-globe mr-3"></span> CIS Google Cloud Computing Platform Benchmarks
+    </a>
+
+<a href="https://workbench.cisecurity.org/benchmarks/9562" title="CIS Google Cloud Platform Foundation Benchmark v2.0.0" class="inline-block mt-4 truncate hover:no-underline" style="width: 280px;">
+    <span class="fa fa-book fa-fw"></span> CIS Google Cloud Platform Foundation Benchmark v2.0.0
+</a>
+
+<div class="flex justify-between">
+                        <a class="" href="https://workbench.cisecurity.org/benchmarks/9562/files">
+                <button class="text-gray-700 border-none bg-warm-gray-100 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-cis-light-500 hover:text-white focus:outline-none focus:ring whitespace-nowrap disabled:opacity-50 my-2" style="width: 125px;">
+    <i class="fa fa-fw fa-file"></i> Files
+</button>
+            </a>
+                    
+    <div></div>
+
+            <a class="" href="https://workbench.cisecurity.org/benchmarks/9562/tickets">
+            <button class="text-gray-700 border-none bg-warm-gray-100 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-cis-light-500 hover:text-white focus:outline-none focus:ring whitespace-nowrap disabled:opacity-50 my-2" style="width: 125px;">
+    <i class="fa fa-fw fa-ticket"></i> Tickets
+</button>
+        </a>
+        </div>
+
+<div class="min-hide mt-4">
+    <wb-nav-tree benchmark-id="9562"></wb-nav-tree>
+</div>
+						</div>
+					</div>
+				</div>
+						<div id="page-content-wrapper">
+							<header class="navbar-fixed-top navbar-prod">
+											<div class="container">
+				<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-logo-header navbar-header">
+			<a class="navbar-brand" href="https://workbench.cisecurity.org">
+				<img class="navbar-logo" src="/images/CIS_Workbench_Spot.png" alt="Security Benchmarks" data-cy="navbar-logo" />
+			</a>
+		</div>
+
+		<div class="navbar-mobile">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+
+		<div class="navbar-collapse">
+			<ul class="nav navbar-nav navbar-main">
+				<li>
+			<a href="https://workbench.cisecurity.org/communities/public" class="community-nav">
+				<span class="fa fa-globe icon-hover">
+					<span class="hover-text hidden-lg">Communities</span>
+				</span>
+				<span class="hidden-sm"> Communities</span>
+			</a>
+		</li>
+		<li>
+		<a href="https://workbench.cisecurity.org/benchmarks" class="benchmarks-nav">
+			<span class="fa fa-book icon-hover">
+				<span class="hover-text hidden-lg">Benchmarks</span>
+			</span>
+			<span class="hidden-sm"> Benchmarks</span>
+		</a>
+	</li>
+	<li>
+		<a href="https://workbench.cisecurity.org/tickets?status=new%7Cinprogress%7Cassigned&sortBy=updated_at&type=desc" class="tickets-nav">
+			<span class="fa fa-ticket icon-hover"><span class="hover-text hidden-lg">Tickets</span></span><span class=" hidden-sm"> Tickets</span>
+		</a>
+	</li>
+	<li>
+		<a href="https://workbench.cisecurity.org/files" class="downloads-nav">
+			<span class="fa fa-download icon-hover"><span class="hover-text hidden-lg">Downloads</span></span><span class="hidden-sm"> Downloads</span>
+		</a>
+	</li>
+
+		
+	<li>
+	<a href="https://workbench.cisecurity.org/support-center"><span class="fa fa-question icon-hover"><span class="hover-text hidden-lg">Support Center</span></span><span class="hidden-sm"> Support Center</span></a>
+</li>
+
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+								<li class="dropdown dropdown-hover user-nav">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" dusk="user-nav-dropdown">
+		<span class="fa fa-user" style="margin-right: 5px;" aria-hidden="true"></span>kikkawa
+			
+		<span class="caret"></span>
+	</a>
+	<ul class="dropdown-menu" role="menu">
+		<li>
+			<a href="https://workbench.cisecurity.org/user/kikkawa" class="username-nav tour-step-backdrop">
+				<span class="fa fa-fw fa-user"></span> kikkawa
+			</a>
+		</li>
+				<li>
+			<a href="https://workbench.cisecurity.org/notifications">
+				<i class="fa fa-fw fa-bell"></i>
+				Notifications
+
+			</a>
+		</li>
+		<li>
+			<a href="https://workbench.cisecurity.org/notifications?#community_default_settings">
+				<i class="fa fa-fw fa-toggle-on"></i>
+				Notification Settings
+			</a>
+		</li>
+
+		<li class="divider"></li>
+		<li>
+			<form method="POST" action="https://workbench.cisecurity.org/logout" accept-charset="UTF-8" style="margin-bottom: 0;"><input name="_token" type="hidden" value="cQ7yDdoVvPvbdR0xzCEmyzaojFrVDoeGOhG2erTj">
+			<button class="btn btn-link" style="padding: 3px 20px; width: 100%; text-align: left; color: #333f48;" type="submit" data-cy="logout">
+				<span class="fa fa-fw fa-sign-out"></span> Log Out
+			</button>
+			</form>
+		</li>
+	</ul>
+</li>
+
+			</ul>
+		</div>
+	</div>
+</div>
+			</div>					
+				</header>
+				<div id="content" >
+					<div class="container-fluid">
+																									    			<div class="sticky flex justify-between bg-white z-10 py-5 shadow-md" style="margin: 0 -20px 0 -20px; padding-left: 20px; padding-right: 20px; width: calc(100% - 180px); position: fixed;">
+    <div class="flex -ml-2 sticky-flex-pos">
+        <button class="text-gray-700 border-none bg-warm-gray-100 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-cis-light-500 hover:text-white focus:outline-none focus:ring whitespace-nowrap disabled:opacity-50 m-2" style="max-height: 30px;" aria-label="Previous" disabled="disabled">
+    <i class="fa fa-caret-left"></i>
+</button>
+
+<button class="text-gray-700 border-none bg-warm-gray-100 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-cis-light-500 hover:text-white focus:outline-none focus:ring whitespace-nowrap disabled:opacity-50 m-2" style="max-height: 30px;" aria-label="Next" disabled="disabled">
+    <i class="fa fa-caret-right"></i>
+</button>
+
+			<button class="text-gray-700 border-none bg-warm-gray-100 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-cis-light-500 hover:text-white focus:outline-none focus:ring whitespace-nowrap disabled:opacity-50 m-2" style="max-height: 30px;" disabled="disabled">
+    Edit
+</button>
+	
+	<button class="text-gray-700 border-none bg-warm-gray-100 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-cis-light-500 hover:text-white focus:outline-none focus:ring whitespace-nowrap disabled:opacity-50 m-2" style="max-height: 30px;" disabled="disabled">
+    Propose Change
+</button>
+
+	<button class="text-gray-700 border-none bg-warm-gray-100 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-cis-light-500 hover:text-white focus:outline-none focus:ring whitespace-nowrap disabled:opacity-50 m-2" style="max-height: 30px;" disabled="disabled">
+    Fork
+</button>
+
+	<button class="text-gray-700 border-none bg-warm-gray-100 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-cis-light-500 hover:text-white focus:outline-none focus:ring whitespace-nowrap disabled:opacity-50 m-2" style="max-height: 30px;" disabled="disabled">
+    Duplicate
+</button>
+
+    
+                            <button class="text-gray-700 border-none bg-warm-gray-100 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-cis-light-500 hover:text-white focus:outline-none focus:ring whitespace-nowrap disabled:opacity-50 m-2" style="max-height: 30px;" disabled="disabled">
+    Export
+</button>
+            
+                                <button class="text-gray-700 border-none bg-warm-gray-100 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-cis-light-500 hover:text-white focus:outline-none focus:ring whitespace-nowrap disabled:opacity-50 m-2" style="max-height: 30px;" disabled="disabled">
+    Profiles
+</button>
+        
+                    <div class="ml-3 mt-2" style="height: auto;">
+                <wb-drop-down drop-down-class="benchmark-nav-drop-down" trigger-class="block hover:bg-warm-gray-100 rounded-md px-4 py-2">
+                    <div class="py-2 px-8 rounded-md bg-white shadow hover:no-underline" style="width: 15rem; display: none;">
+                        <a class="block w-full no-underline whitespace-nowrap py-3 focus:outline-none hover:no-underline" href="https://workbench.cisecurity.org/benchmarks/9562/controls">
+    Controls Mappings
+</a>
+
+
+                                            </div>
+                </wb-drop-down>
+            </div>
+        
+            </div>
+</div>
+<wb-table-listing-modals></wb-table-listing-modals>
+
+	
+    <div class="-mt-6 mb-10" style=" margin-top:85px;">
+
+        <h1><strong>Controls mapped to Benchmark</strong></h1>
+
+    </div>
+    <div class="w-full max-w-full">
+        
+            <nav class="flex mb-12">
+                
+                                    <a href="#version_8" data-tab="version_8" data-group="version"
+                       class="navigation-tabs-links version-links nav-tabs-link-active">
+                        Version 8
+                    </a>
+                                    <a href="#version_7" data-tab="version_7" data-group="version"
+                       class="navigation-tabs-links version-links nav-tabs-link-passive">
+                        Version 7
+                    </a>
+                                <div class="nav-tabs-link-passive flex-grow"></div>
+            </nav>
+
+                            <div id="version_8"
+                     class="version-tabs ">
+                    <div class="flex justify-between items-baseline">
+    <div>
+        <h3>CIS Controls Version 8</h3>
+    </div>
+    <div class="pr-7">
+                    <wb-recommendations-linked-to-control-modal
+                    title="Unmapped Recommendations for CIS Controls Version 8"
+                    link-text="Unmapped Recommendations"
+                    recommendations="[{&quot;id&quot;:2036712,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That There Are Only GCP-Managed Service Account Keys for Each Service Account&quot;,&quot;view_level&quot;:&quot;1.4&quot;},{&quot;id&quot;:2036715,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure User-Managed\/External Keys for Service Accounts Are Rotated Every 90 Days or Fewer&quot;,&quot;view_level&quot;:&quot;1.7&quot;},{&quot;id&quot;:2036774,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Compute Instances Are Launched With Shielded VM Enabled&quot;,&quot;view_level&quot;:&quot;4.8&quot;}]">
+            </wb-recommendations-linked-to-control-modal>
+            </div>
+
+</div>
+<table class="table table-striped table-hover ">
+    <thead>
+    <tr>
+        <th>Control</th>
+        <th>Title</th>
+        <th class="text-center">IG 1</th>
+        <th class="text-center">IG 2</th>
+        <th class="text-center">IG 3</th>
+        <th class="text-center">Linked Recommendations</th>
+    </tr>
+    </thead>
+    <tbody>
+            <tr>
+            <td>1.1</td>
+            <td>
+                                    Establish and Maintain Detailed Enterprise Asset Inventory
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 1.1 Establish and Maintain Detailed Enterprise Asset Inventory (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036748,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Cloud Asset Inventory Is Enabled&quot;,&quot;view_level&quot;:&quot;2.13&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:363,&quot;recommendation_id&quot;:2036748}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>2.2</td>
+            <td>
+                                    Ensure Authorized Software is Currently Supported 
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 2.2 Ensure Authorized Software is Currently Supported  (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036782,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure the Latest Operating System Updates Are Installed On Your Virtual Machines in All Projects&quot;,&quot;view_level&quot;:&quot;4.12&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:370,&quot;recommendation_id&quot;:2036782}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>2.7</td>
+            <td>
+                                    Allowlist Authorized Scripts
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 2.7 Allowlist Authorized Scripts (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036779,&quot;section_id&quot;:1260479,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure &#039;external scripts enabled&#039; database flag for Cloud SQL SQL Server instance is set to &#039;off&#039;&quot;,&quot;view_level&quot;:&quot;6.3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:375,&quot;recommendation_id&quot;:2036779}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>3.3</td>
+            <td>
+                                    Configure Data Access Control Lists
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 3.3 Configure Data Access Control Lists (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036714,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That IAM Users Are Not Assigned the Service Account User or Service Account Token Creator Roles at Project Level&quot;,&quot;view_level&quot;:&quot;1.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:2036714}},{&quot;id&quot;:2036716,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Separation of Duties Is Enforced While Assigning Service Account Related Roles to Users&quot;,&quot;view_level&quot;:&quot;1.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:2036716}},{&quot;id&quot;:2036717,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud KMS Cryptokeys Are Not Anonymously or Publicly Accessible&quot;,&quot;view_level&quot;:&quot;1.9&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:2036717}},{&quot;id&quot;:2036719,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Separation of Duties Is Enforced While Assigning KMS Related Roles to Users&quot;,&quot;view_level&quot;:&quot;1.11&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:2036719}},{&quot;id&quot;:2036728,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Retention Policies on Cloud Storage Buckets Used for Exporting Logs Are Configured Using Bucket Lock&quot;,&quot;view_level&quot;:&quot;2.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:2036728}},{&quot;id&quot;:2036751,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure &#039;Access Approval&#039; is &#039;Enabled&#039;&quot;,&quot;view_level&quot;:&quot;2.15&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:2036751}},{&quot;id&quot;:2036776,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Compute Instances Do Not Have Public IP Addresses&quot;,&quot;view_level&quot;:&quot;4.9&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:2036776}},{&quot;id&quot;:2036758,&quot;section_id&quot;:1260477,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud Storage Bucket Is Not Anonymously or Publicly Accessible&quot;,&quot;view_level&quot;:&quot;5.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:2036758}},{&quot;id&quot;:2036763,&quot;section_id&quot;:1260477,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud Storage Buckets Have Uniform Bucket-Level Access Enabled&quot;,&quot;view_level&quot;:&quot;5.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:2036763}},{&quot;id&quot;:2036755,&quot;section_id&quot;:1260475,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure \u2018Skip_show_database\u2019 Database Flag for Cloud SQL MySQL Instance Is Set to \u2018On\u2019&quot;,&quot;view_level&quot;:&quot;6.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:2036755}},{&quot;id&quot;:2036781,&quot;section_id&quot;:1260479,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure that the &#039;cross db ownership chaining&#039; database flag for Cloud SQL SQL Server instance is set to &#039;off&#039;&quot;,&quot;view_level&quot;:&quot;6.3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:2036781}},{&quot;id&quot;:2036787,&quot;section_id&quot;:1260479,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure that the &#039;contained database authentication&#039; database flag for Cloud SQL on the SQL Server instance is set to &#039;off&#039;&quot;,&quot;view_level&quot;:&quot;6.3.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:2036787}},{&quot;id&quot;:2036789,&quot;section_id&quot;:1260474,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud SQL Database Instances Do Not Implicitly Whitelist All Public IP Addresses&quot;,&quot;view_level&quot;:&quot;6.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:2036789}},{&quot;id&quot;:2036790,&quot;section_id&quot;:1260474,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud SQL Database Instances Do Not Have Public IPs&quot;,&quot;view_level&quot;:&quot;6.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:2036790}},{&quot;id&quot;:2036754,&quot;section_id&quot;:1260476,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That BigQuery Datasets Are Not Anonymously or Publicly Accessible&quot;,&quot;view_level&quot;:&quot;7.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:2036754}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>3.10</td>
+            <td>
+                                    Encrypt Sensitive Data in Transit
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 3.10 Encrypt Sensitive Data in Transit (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036747,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure No HTTPS or SSL Proxy Load Balancers Permit SSL Policies With Weak Cipher Suites&quot;,&quot;view_level&quot;:&quot;3.9&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:528,&quot;recommendation_id&quot;:2036747}},{&quot;id&quot;:2036761,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure \u201cBlock Project-Wide SSH Keys\u201d Is Enabled for VM Instances&quot;,&quot;view_level&quot;:&quot;4.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:528,&quot;recommendation_id&quot;:2036761}},{&quot;id&quot;:2036778,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That App Engine Applications Enforce HTTPS Connections&quot;,&quot;view_level&quot;:&quot;4.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:528,&quot;recommendation_id&quot;:2036778}},{&quot;id&quot;:2036788,&quot;section_id&quot;:1260474,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Cloud SQL Database Instance Requires All Incoming Connections To Use SSL&quot;,&quot;view_level&quot;:&quot;6.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:528,&quot;recommendation_id&quot;:2036788}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>3.11</td>
+            <td>
+                                    Encrypt Sensitive Data at Rest
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 3.11 Encrypt Sensitive Data at Rest (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036718,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure KMS Encryption Keys Are Rotated Within a Period of 90 Days&quot;,&quot;view_level&quot;:&quot;1.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:386,&quot;recommendation_id&quot;:2036718}},{&quot;id&quot;:2036727,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure that Dataproc Cluster is encrypted using Customer-Managed Encryption Key&quot;,&quot;view_level&quot;:&quot;1.17&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:386,&quot;recommendation_id&quot;:2036727}},{&quot;id&quot;:2036729,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Secrets are Not Stored in Cloud Functions Environment Variables by Using Secret Manager&quot;,&quot;view_level&quot;:&quot;1.18&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:386,&quot;recommendation_id&quot;:2036729}},{&quot;id&quot;:2036772,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure VM Disks for Critical VMs Are Encrypted With Customer-Supplied Encryption Keys (CSEK)&quot;,&quot;view_level&quot;:&quot;4.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:386,&quot;recommendation_id&quot;:2036772}},{&quot;id&quot;:2036780,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Compute Instances Have Confidential Computing Enabled&quot;,&quot;view_level&quot;:&quot;4.11&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:386,&quot;recommendation_id&quot;:2036780}},{&quot;id&quot;:2036756,&quot;section_id&quot;:1260476,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That All BigQuery Tables Are Encrypted With Customer-Managed Encryption Key (CMEK)&quot;,&quot;view_level&quot;:&quot;7.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:386,&quot;recommendation_id&quot;:2036756}},{&quot;id&quot;:2036760,&quot;section_id&quot;:1260476,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That a Default Customer-Managed Encryption Key (CMEK) Is Specified for All BigQuery Data Sets&quot;,&quot;view_level&quot;:&quot;7.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:386,&quot;recommendation_id&quot;:2036760}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.1</td>
+            <td>
+                                    Establish and Maintain a Secure Configuration Process
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.1 Establish and Maintain a Secure Configuration Process (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036783,&quot;section_id&quot;:1260479,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure &#039;user Connections&#039; Database Flag for Cloud Sql Sql Server Instance Is Set to a Non-limiting Value&quot;,&quot;view_level&quot;:&quot;6.3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:2036783}},{&quot;id&quot;:2036784,&quot;section_id&quot;:1260479,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure &#039;user options&#039; database flag for Cloud SQL SQL Server instance is not configured&quot;,&quot;view_level&quot;:&quot;6.3.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:2036784}},{&quot;id&quot;:2036786,&quot;section_id&quot;:1260479,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure &#039;3625 (trace flag)&#039; database flag for all Cloud SQL Server instances is set to &#039;on&#039;&quot;,&quot;view_level&quot;:&quot;6.3.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:2036786}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.2</td>
+            <td>
+                                    Establish and Maintain a Secure Configuration Process for Network Infrastructure
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.2 Establish and Maintain a Secure Configuration Process for Network Infrastructure (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036732,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Default Network Does Not Exist in a Project&quot;,&quot;view_level&quot;:&quot;3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:392,&quot;recommendation_id&quot;:2036732}},{&quot;id&quot;:2036734,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Legacy Networks Do Not Exist for Older Projects&quot;,&quot;view_level&quot;:&quot;3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:392,&quot;recommendation_id&quot;:2036734}},{&quot;id&quot;:2036736,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That DNSSEC Is Enabled for Cloud DNS&quot;,&quot;view_level&quot;:&quot;3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:392,&quot;recommendation_id&quot;:2036736}},{&quot;id&quot;:2036738,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That RSASHA1 Is Not Used for the Key-Signing Key in Cloud DNS DNSSEC&quot;,&quot;view_level&quot;:&quot;3.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:392,&quot;recommendation_id&quot;:2036738}},{&quot;id&quot;:2036739,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That RSASHA1 Is Not Used for the Zone-Signing Key in Cloud DNS DNSSEC&quot;,&quot;view_level&quot;:&quot;3.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:392,&quot;recommendation_id&quot;:2036739}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.4</td>
+            <td>
+                                    Implement and Manage a Firewall on Servers
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.4 Implement and Manage a Firewall on Servers (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036741,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That SSH Access Is Restricted From the Internet&quot;,&quot;view_level&quot;:&quot;3.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:394,&quot;recommendation_id&quot;:2036741}},{&quot;id&quot;:2036743,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That RDP Access Is Restricted From the Internet&quot;,&quot;view_level&quot;:&quot;3.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:394,&quot;recommendation_id&quot;:2036743}},{&quot;id&quot;:2036769,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That IP Forwarding Is Not Enabled on Instances&quot;,&quot;view_level&quot;:&quot;4.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:394,&quot;recommendation_id&quot;:2036769}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.5</td>
+            <td>
+                                    Implement and Manage a Firewall on End-User Devices
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.5 Implement and Manage a Firewall on End-User Devices (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036741,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That SSH Access Is Restricted From the Internet&quot;,&quot;view_level&quot;:&quot;3.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:395,&quot;recommendation_id&quot;:2036741}},{&quot;id&quot;:2036743,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That RDP Access Is Restricted From the Internet&quot;,&quot;view_level&quot;:&quot;3.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:395,&quot;recommendation_id&quot;:2036743}},{&quot;id&quot;:2036769,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That IP Forwarding Is Not Enabled on Instances&quot;,&quot;view_level&quot;:&quot;4.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:395,&quot;recommendation_id&quot;:2036769}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.6</td>
+            <td>
+                                    Securely Manage Enterprise Assets and Software
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.6 Securely Manage Enterprise Assets and Software (Version 8)"
+                        recommendations="[{&quot;id&quot;:2570645,&quot;section_id&quot;:1260478,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Instance IP assignment is set to private&quot;,&quot;view_level&quot;:&quot;6.2.9&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:396,&quot;recommendation_id&quot;:2570645}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.7</td>
+            <td>
+                                    Manage Default Accounts on Enterprise Assets and Software
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.7 Manage Default Accounts on Enterprise Assets and Software (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036752,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Instances Are Not Configured To Use the Default Service Account&quot;,&quot;view_level&quot;:&quot;4.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:397,&quot;recommendation_id&quot;:2036752}},{&quot;id&quot;:2036757,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Instances Are Not Configured To Use the Default Service Account With Full Access to All Cloud APIs&quot;,&quot;view_level&quot;:&quot;4.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:397,&quot;recommendation_id&quot;:2036757}},{&quot;id&quot;:2036753,&quot;section_id&quot;:1260475,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That a MySQL Database Instance Does Not Allow Anyone To Connect With Administrative Privileges&quot;,&quot;view_level&quot;:&quot;6.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:397,&quot;recommendation_id&quot;:2036753}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.8</td>
+            <td>
+                                    Uninstall or Disable Unnecessary Services on Enterprise Assets and Software
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036767,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure \u2018Enable Connecting to Serial Ports\u2019 Is Not Enabled for VM Instance&quot;,&quot;view_level&quot;:&quot;4.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:2036767}},{&quot;id&quot;:2036785,&quot;section_id&quot;:1260479,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure &#039;remote access&#039; database flag for Cloud SQL SQL Server instance is set to &#039;off&#039;&quot;,&quot;view_level&quot;:&quot;6.3.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:2036785}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>5.2</td>
+            <td>
+                                    Use Unique Passwords
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 5.2 Use Unique Passwords (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036761,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure \u201cBlock Project-Wide SSH Keys\u201d Is Enabled for VM Instances&quot;,&quot;view_level&quot;:&quot;4.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:404,&quot;recommendation_id&quot;:2036761}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>5.4</td>
+            <td>
+                                    Restrict Administrator Privileges to Dedicated Administrator Accounts
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 5.4 Restrict Administrator Privileges to Dedicated Administrator Accounts (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036713,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Service Account Has No Admin Privileges&quot;,&quot;view_level&quot;:&quot;1.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:406,&quot;recommendation_id&quot;:2036713}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>5.6</td>
+            <td>
+                                    Centralize Account Management
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 5.6 Centralize Account Management (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036709,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure that Corporate Login Credentials are Used&quot;,&quot;view_level&quot;:&quot;1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:408,&quot;recommendation_id&quot;:2036709}},{&quot;id&quot;:2036749,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Use Identity Aware Proxy (IAP) to Ensure Only Traffic From Google IP Addresses are &#039;Allowed&#039;&quot;,&quot;view_level&quot;:&quot;3.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:408,&quot;recommendation_id&quot;:2036749}},{&quot;id&quot;:2036765,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Oslogin Is Enabled for a Project&quot;,&quot;view_level&quot;:&quot;4.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:408,&quot;recommendation_id&quot;:2036765}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>6.3</td>
+            <td>
+                                    Require MFA for Externally-Exposed Applications
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 6.3 Require MFA for Externally-Exposed Applications (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036710,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure that Multi-Factor Authentication is &#039;Enabled&#039; for All Non-Service Accounts&quot;,&quot;view_level&quot;:&quot;1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:412,&quot;recommendation_id&quot;:2036710}},{&quot;id&quot;:2036711,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure that Security Key Enforcement is Enabled for All Admin Accounts&quot;,&quot;view_level&quot;:&quot;1.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:412,&quot;recommendation_id&quot;:2036711}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>6.6</td>
+            <td>
+                                    Establish and Maintain an Inventory of Authentication and Authorization Systems
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 6.6 Establish and Maintain an Inventory of Authentication and Authorization Systems (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036748,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Cloud Asset Inventory Is Enabled&quot;,&quot;view_level&quot;:&quot;2.13&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:415,&quot;recommendation_id&quot;:2036748}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>6.7</td>
+            <td>
+                                    Centralize Access Control
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 6.7 Centralize Access Control (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036765,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Oslogin Is Enabled for a Project&quot;,&quot;view_level&quot;:&quot;4.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:416,&quot;recommendation_id&quot;:2036765}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>8.2</td>
+            <td>
+                                    Collect Audit Logs
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 8.2 Collect Audit Logs (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036723,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud Audit Logging Is Configured Properly&quot;,&quot;view_level&quot;:&quot;2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:428,&quot;recommendation_id&quot;:2036723}},{&quot;id&quot;:2036726,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Sinks Are Configured for All Log Entries&quot;,&quot;view_level&quot;:&quot;2.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:428,&quot;recommendation_id&quot;:2036726}},{&quot;id&quot;:2036730,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Log Metric Filter and Alerts Exist for Project Ownership Assignments\/Changes&quot;,&quot;view_level&quot;:&quot;2.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:428,&quot;recommendation_id&quot;:2036730}},{&quot;id&quot;:2036731,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for Audit Configuration Changes&quot;,&quot;view_level&quot;:&quot;2.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:428,&quot;recommendation_id&quot;:2036731}},{&quot;id&quot;:2036733,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for Custom Role Changes&quot;,&quot;view_level&quot;:&quot;2.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:428,&quot;recommendation_id&quot;:2036733}},{&quot;id&quot;:2036735,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for VPC Network Firewall Rule Changes&quot;,&quot;view_level&quot;:&quot;2.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:428,&quot;recommendation_id&quot;:2036735}},{&quot;id&quot;:2036737,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for VPC Network Route Changes&quot;,&quot;view_level&quot;:&quot;2.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:428,&quot;recommendation_id&quot;:2036737}},{&quot;id&quot;:2036740,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for VPC Network Changes&quot;,&quot;view_level&quot;:&quot;2.9&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:428,&quot;recommendation_id&quot;:2036740}},{&quot;id&quot;:2036742,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for Cloud Storage IAM Permission Changes&quot;,&quot;view_level&quot;:&quot;2.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:428,&quot;recommendation_id&quot;:2036742}},{&quot;id&quot;:2036744,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for SQL Instance Configuration Changes&quot;,&quot;view_level&quot;:&quot;2.11&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:428,&quot;recommendation_id&quot;:2036744}},{&quot;id&quot;:2036746,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud DNS Logging Is Enabled for All VPC Networks&quot;,&quot;view_level&quot;:&quot;2.12&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:428,&quot;recommendation_id&quot;:2036746}},{&quot;id&quot;:2036750,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure &#039;Access Transparency&#039; is &#039;Enabled&#039;&quot;,&quot;view_level&quot;:&quot;2.14&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:428,&quot;recommendation_id&quot;:2036750}},{&quot;id&quot;:2563725,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Logging is enabled for HTTP(S) Load Balancer&quot;,&quot;view_level&quot;:&quot;2.16&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:428,&quot;recommendation_id&quot;:2563725}},{&quot;id&quot;:2036745,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure that VPC Flow Logs is Enabled for Every Subnet in a VPC Network&quot;,&quot;view_level&quot;:&quot;3.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:428,&quot;recommendation_id&quot;:2036745}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>8.3</td>
+            <td>
+                                    Ensure Adequate Audit Log Storage
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 8.3 Ensure Adequate Audit Log Storage (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036726,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Sinks Are Configured for All Log Entries&quot;,&quot;view_level&quot;:&quot;2.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:429,&quot;recommendation_id&quot;:2036726}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>8.5</td>
+            <td>
+                                    Collect Detailed Audit Logs
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 8.5 Collect Detailed Audit Logs (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036731,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for Audit Configuration Changes&quot;,&quot;view_level&quot;:&quot;2.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:431,&quot;recommendation_id&quot;:2036731}},{&quot;id&quot;:2036733,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for Custom Role Changes&quot;,&quot;view_level&quot;:&quot;2.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:431,&quot;recommendation_id&quot;:2036733}},{&quot;id&quot;:2036735,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for VPC Network Firewall Rule Changes&quot;,&quot;view_level&quot;:&quot;2.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:431,&quot;recommendation_id&quot;:2036735}},{&quot;id&quot;:2036737,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for VPC Network Route Changes&quot;,&quot;view_level&quot;:&quot;2.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:431,&quot;recommendation_id&quot;:2036737}},{&quot;id&quot;:2036740,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for VPC Network Changes&quot;,&quot;view_level&quot;:&quot;2.9&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:431,&quot;recommendation_id&quot;:2036740}},{&quot;id&quot;:2036742,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for Cloud Storage IAM Permission Changes&quot;,&quot;view_level&quot;:&quot;2.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:431,&quot;recommendation_id&quot;:2036742}},{&quot;id&quot;:2036744,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for SQL Instance Configuration Changes&quot;,&quot;view_level&quot;:&quot;2.11&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:431,&quot;recommendation_id&quot;:2036744}},{&quot;id&quot;:2036750,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure &#039;Access Transparency&#039; is &#039;Enabled&#039;&quot;,&quot;view_level&quot;:&quot;2.14&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:431,&quot;recommendation_id&quot;:2036750}},{&quot;id&quot;:2036762,&quot;section_id&quot;:1260478,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure \u2018Log_error_verbosity\u2019 Database Flag for Cloud SQL PostgreSQL Instance Is Set to \u2018DEFAULT\u2019 or Stricter&quot;,&quot;view_level&quot;:&quot;6.2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:431,&quot;recommendation_id&quot;:2036762}},{&quot;id&quot;:2036764,&quot;section_id&quot;:1260478,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the \u2018Log_connections\u2019 Database Flag for Cloud SQL PostgreSQL Instance Is Set to \u2018On\u2019&quot;,&quot;view_level&quot;:&quot;6.2.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:431,&quot;recommendation_id&quot;:2036764}},{&quot;id&quot;:2036766,&quot;section_id&quot;:1260478,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the \u2018Log_disconnections\u2019 Database Flag for Cloud SQL PostgreSQL Instance Is Set to \u2018On\u2019&quot;,&quot;view_level&quot;:&quot;6.2.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:431,&quot;recommendation_id&quot;:2036766}},{&quot;id&quot;:2036768,&quot;section_id&quot;:1260478,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure \u2018Log_statement\u2019 Database Flag for Cloud SQL PostgreSQL Instance Is Set Appropriately&quot;,&quot;view_level&quot;:&quot;6.2.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:431,&quot;recommendation_id&quot;:2036768}},{&quot;id&quot;:2036771,&quot;section_id&quot;:1260478,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure that the \u2018Log_min_messages\u2019 Flag for a Cloud SQL PostgreSQL Instance is set at minimum to &#039;Warning&#039;&quot;,&quot;view_level&quot;:&quot;6.2.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:431,&quot;recommendation_id&quot;:2036771}},{&quot;id&quot;:2036773,&quot;section_id&quot;:1260478,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure \u2018Log_min_error_statement\u2019 Database Flag for Cloud SQL PostgreSQL Instance Is Set to \u2018Error\u2019 or Stricter&quot;,&quot;view_level&quot;:&quot;6.2.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:431,&quot;recommendation_id&quot;:2036773}},{&quot;id&quot;:2036775,&quot;section_id&quot;:1260478,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the \u2018Log_min_duration_statement\u2019 Database Flag for Cloud SQL PostgreSQL Instance Is Set to \u2018-1\u2032 (Disabled)&quot;,&quot;view_level&quot;:&quot;6.2.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:431,&quot;recommendation_id&quot;:2036775}},{&quot;id&quot;:2036777,&quot;section_id&quot;:1260478,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That &#039;cloudsql.enable_pgaudit&#039; Database Flag for each Cloud Sql Postgresql Instance Is Set to &#039;on&#039; For Centralized Logging&quot;,&quot;view_level&quot;:&quot;6.2.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:431,&quot;recommendation_id&quot;:2036777}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>8.6</td>
+            <td>
+                                    Collect DNS Query Audit Logs
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 8.6 Collect DNS Query Audit Logs (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036746,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud DNS Logging Is Enabled for All VPC Networks&quot;,&quot;view_level&quot;:&quot;2.12&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:432,&quot;recommendation_id&quot;:2036746}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>8.9</td>
+            <td>
+                                    Centralize Audit Logs
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 8.9 Centralize Audit Logs (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036777,&quot;section_id&quot;:1260478,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That &#039;cloudsql.enable_pgaudit&#039; Database Flag for each Cloud Sql Postgresql Instance Is Set to &#039;on&#039; For Centralized Logging&quot;,&quot;view_level&quot;:&quot;6.2.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:435,&quot;recommendation_id&quot;:2036777}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>8.11</td>
+            <td>
+                                    Conduct Audit Log Reviews
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 8.11 Conduct Audit Log Reviews (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036723,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud Audit Logging Is Configured Properly&quot;,&quot;view_level&quot;:&quot;2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:436,&quot;recommendation_id&quot;:2036723}},{&quot;id&quot;:2036746,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud DNS Logging Is Enabled for All VPC Networks&quot;,&quot;view_level&quot;:&quot;2.12&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:436,&quot;recommendation_id&quot;:2036746}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>11.2</td>
+            <td>
+                                    Perform Automated Backups 
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 11.2 Perform Automated Backups  (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036791,&quot;section_id&quot;:1260474,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud SQL Database Instances Are Configured With Automated Backups&quot;,&quot;view_level&quot;:&quot;6.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:456,&quot;recommendation_id&quot;:2036791}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>13.6</td>
+            <td>
+                                    Collect Network Traffic Flow Logs 
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 13.6 Collect Network Traffic Flow Logs  (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036745,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure that VPC Flow Logs is Enabled for Every Subnet in a VPC Network&quot;,&quot;view_level&quot;:&quot;3.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:475,&quot;recommendation_id&quot;:2036745}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>16.7</td>
+            <td>
+                                    Use Standard Hardening Configuration Templates for Application Infrastructure
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 16.7 Use Standard Hardening Configuration Templates for Application Infrastructure (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036759,&quot;section_id&quot;:1260475,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the \u2018Local_infile\u2019 Database Flag for a Cloud SQL MySQL Instance Is Set to \u2018Off\u2019&quot;,&quot;view_level&quot;:&quot;6.1.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:505,&quot;recommendation_id&quot;:2036759}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>16.10</td>
+            <td>
+                                    Apply Secure Design Principles in Application Architectures
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 16.10 Apply Secure Design Principles in Application Architectures (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036720,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure API Keys Only Exist for Active Services&quot;,&quot;view_level&quot;:&quot;1.12&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:532,&quot;recommendation_id&quot;:2036720}},{&quot;id&quot;:2036721,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure API Keys Are Restricted To Use by Only Specified Hosts and Apps&quot;,&quot;view_level&quot;:&quot;1.13&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:532,&quot;recommendation_id&quot;:2036721}},{&quot;id&quot;:2036722,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure API Keys Are Restricted to Only APIs That Application Needs Access&quot;,&quot;view_level&quot;:&quot;1.14&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:532,&quot;recommendation_id&quot;:2036722}},{&quot;id&quot;:2036724,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure API Keys Are Rotated Every 90 Days&quot;,&quot;view_level&quot;:&quot;1.15&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:532,&quot;recommendation_id&quot;:2036724}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>16.11</td>
+            <td>
+                                    Leverage Vetted Modules or Services for Application Security Components
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 16.11 Leverage Vetted Modules or Services for Application Security Components (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036778,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That App Engine Applications Enforce HTTPS Connections&quot;,&quot;view_level&quot;:&quot;4.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:508,&quot;recommendation_id&quot;:2036778}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>17.2</td>
+            <td>
+                                    Establish and Maintain Contact Information for Reporting Security Incidents
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 17.2 Establish and Maintain Contact Information for Reporting Security Incidents (Version 8)"
+                        recommendations="[{&quot;id&quot;:2036725,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Essential Contacts is Configured for Organization&quot;,&quot;view_level&quot;:&quot;1.16&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:514,&quot;recommendation_id&quot;:2036725}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+        </tbody>
+</table>
+                </div>
+                            <div id="version_7"
+                     class="version-tabs hidden">
+                    <div class="flex justify-between items-baseline">
+    <div>
+        <h3>CIS Controls Version 7</h3>
+    </div>
+    <div class="pr-7">
+                    <wb-recommendations-linked-to-control-modal
+                    title="Unmapped Recommendations for CIS Controls Version 7"
+                    link-text="Unmapped Recommendations"
+                    recommendations="[{&quot;id&quot;:2036712,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That There Are Only GCP-Managed Service Account Keys for Each Service Account&quot;,&quot;view_level&quot;:&quot;1.4&quot;},{&quot;id&quot;:2036715,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure User-Managed\/External Keys for Service Accounts Are Rotated Every 90 Days or Fewer&quot;,&quot;view_level&quot;:&quot;1.7&quot;},{&quot;id&quot;:2036721,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure API Keys Are Restricted To Use by Only Specified Hosts and Apps&quot;,&quot;view_level&quot;:&quot;1.13&quot;},{&quot;id&quot;:2036722,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure API Keys Are Restricted to Only APIs That Application Needs Access&quot;,&quot;view_level&quot;:&quot;1.14&quot;},{&quot;id&quot;:2036724,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure API Keys Are Rotated Every 90 Days&quot;,&quot;view_level&quot;:&quot;1.15&quot;},{&quot;id&quot;:2036759,&quot;section_id&quot;:1260475,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the \u2018Local_infile\u2019 Database Flag for a Cloud SQL MySQL Instance Is Set to \u2018Off\u2019&quot;,&quot;view_level&quot;:&quot;6.1.3&quot;}]">
+            </wb-recommendations-linked-to-control-modal>
+            </div>
+
+</div>
+<table class="table table-striped table-hover ">
+    <thead>
+    <tr>
+        <th>Control</th>
+        <th>Title</th>
+        <th class="text-center">IG 1</th>
+        <th class="text-center">IG 2</th>
+        <th class="text-center">IG 3</th>
+        <th class="text-center">Linked Recommendations</th>
+    </tr>
+    </thead>
+    <tbody>
+            <tr>
+            <td>1.4</td>
+            <td>
+                                    Maintain Detailed Asset Inventory
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 1.4 Maintain Detailed Asset Inventory (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036748,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Cloud Asset Inventory Is Enabled&quot;,&quot;view_level&quot;:&quot;2.13&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:175,&quot;recommendation_id&quot;:2036748}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>2.2</td>
+            <td>
+                                    Ensure Software is Supported by Vendor
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 2.2 Ensure Software is Supported by Vendor (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036782,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure the Latest Operating System Updates Are Installed On Your Virtual Machines in All Projects&quot;,&quot;view_level&quot;:&quot;4.12&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:182,&quot;recommendation_id&quot;:2036782}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>2.9</td>
+            <td>
+                                    Implement Application Whitelisting of Scripts
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 2.9 Implement Application Whitelisting of Scripts (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036779,&quot;section_id&quot;:1260479,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure &#039;external scripts enabled&#039; database flag for Cloud SQL SQL Server instance is set to &#039;off&#039;&quot;,&quot;view_level&quot;:&quot;6.3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:189,&quot;recommendation_id&quot;:2036779}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.2</td>
+            <td>
+                                    Change Default Passwords
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.2 Change Default Passwords (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036753,&quot;section_id&quot;:1260475,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That a MySQL Database Instance Does Not Allow Anyone To Connect With Administrative Privileges&quot;,&quot;view_level&quot;:&quot;6.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:201,&quot;recommendation_id&quot;:2036753}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.3</td>
+            <td>
+                                    Ensure the Use of Dedicated Administrative Accounts
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.3 Ensure the Use of Dedicated Administrative Accounts (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036713,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Service Account Has No Admin Privileges&quot;,&quot;view_level&quot;:&quot;1.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:202,&quot;recommendation_id&quot;:2036713}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.4</td>
+            <td>
+                                    Use Unique Passwords
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.4 Use Unique Passwords (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036761,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure \u201cBlock Project-Wide SSH Keys\u201d Is Enabled for VM Instances&quot;,&quot;view_level&quot;:&quot;4.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:203,&quot;recommendation_id&quot;:2036761}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.7</td>
+            <td>
+                                    Limit Access to Script Tools
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.7 Limit Access to Script Tools (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036752,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Instances Are Not Configured To Use the Default Service Account&quot;,&quot;view_level&quot;:&quot;4.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:206,&quot;recommendation_id&quot;:2036752}},{&quot;id&quot;:2036757,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Instances Are Not Configured To Use the Default Service Account With Full Access to All Cloud APIs&quot;,&quot;view_level&quot;:&quot;4.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:206,&quot;recommendation_id&quot;:2036757}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>5.1</td>
+            <td>
+                                    Establish Secure Configurations
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 5.1 Establish Secure Configurations (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036783,&quot;section_id&quot;:1260479,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure &#039;user Connections&#039; Database Flag for Cloud Sql Sql Server Instance Is Set to a Non-limiting Value&quot;,&quot;view_level&quot;:&quot;6.3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:2036783}},{&quot;id&quot;:2036784,&quot;section_id&quot;:1260479,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure &#039;user options&#039; database flag for Cloud SQL SQL Server instance is not configured&quot;,&quot;view_level&quot;:&quot;6.3.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:2036784}},{&quot;id&quot;:2036786,&quot;section_id&quot;:1260479,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure &#039;3625 (trace flag)&#039; database flag for all Cloud SQL Server instances is set to &#039;on&#039;&quot;,&quot;view_level&quot;:&quot;6.3.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:2036786}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>5.2</td>
+            <td>
+                                    Maintain Secure Images
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 5.2 Maintain Secure Images (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036774,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Compute Instances Are Launched With Shielded VM Enabled&quot;,&quot;view_level&quot;:&quot;4.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:211,&quot;recommendation_id&quot;:2036774}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>6.2</td>
+            <td>
+                                    Activate audit logging
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 6.2 Activate audit logging (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036723,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud Audit Logging Is Configured Properly&quot;,&quot;view_level&quot;:&quot;2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:217,&quot;recommendation_id&quot;:2036723}},{&quot;id&quot;:2036726,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Sinks Are Configured for All Log Entries&quot;,&quot;view_level&quot;:&quot;2.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:217,&quot;recommendation_id&quot;:2036726}},{&quot;id&quot;:2036730,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Log Metric Filter and Alerts Exist for Project Ownership Assignments\/Changes&quot;,&quot;view_level&quot;:&quot;2.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:217,&quot;recommendation_id&quot;:2036730}},{&quot;id&quot;:2036731,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for Audit Configuration Changes&quot;,&quot;view_level&quot;:&quot;2.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:217,&quot;recommendation_id&quot;:2036731}},{&quot;id&quot;:2036733,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for Custom Role Changes&quot;,&quot;view_level&quot;:&quot;2.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:217,&quot;recommendation_id&quot;:2036733}},{&quot;id&quot;:2036735,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for VPC Network Firewall Rule Changes&quot;,&quot;view_level&quot;:&quot;2.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:217,&quot;recommendation_id&quot;:2036735}},{&quot;id&quot;:2036737,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for VPC Network Route Changes&quot;,&quot;view_level&quot;:&quot;2.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:217,&quot;recommendation_id&quot;:2036737}},{&quot;id&quot;:2036740,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for VPC Network Changes&quot;,&quot;view_level&quot;:&quot;2.9&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:217,&quot;recommendation_id&quot;:2036740}},{&quot;id&quot;:2036742,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for Cloud Storage IAM Permission Changes&quot;,&quot;view_level&quot;:&quot;2.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:217,&quot;recommendation_id&quot;:2036742}},{&quot;id&quot;:2036744,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for SQL Instance Configuration Changes&quot;,&quot;view_level&quot;:&quot;2.11&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:217,&quot;recommendation_id&quot;:2036744}},{&quot;id&quot;:2036746,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud DNS Logging Is Enabled for All VPC Networks&quot;,&quot;view_level&quot;:&quot;2.12&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:217,&quot;recommendation_id&quot;:2036746}},{&quot;id&quot;:2036750,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure &#039;Access Transparency&#039; is &#039;Enabled&#039;&quot;,&quot;view_level&quot;:&quot;2.14&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:217,&quot;recommendation_id&quot;:2036750}},{&quot;id&quot;:2563725,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Logging is enabled for HTTP(S) Load Balancer&quot;,&quot;view_level&quot;:&quot;2.16&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:217,&quot;recommendation_id&quot;:2563725}},{&quot;id&quot;:2036745,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure that VPC Flow Logs is Enabled for Every Subnet in a VPC Network&quot;,&quot;view_level&quot;:&quot;3.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:217,&quot;recommendation_id&quot;:2036745}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>6.3</td>
+            <td>
+                                    Enable Detailed Logging
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 6.3 Enable Detailed Logging (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036731,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for Audit Configuration Changes&quot;,&quot;view_level&quot;:&quot;2.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:218,&quot;recommendation_id&quot;:2036731}},{&quot;id&quot;:2036733,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for Custom Role Changes&quot;,&quot;view_level&quot;:&quot;2.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:218,&quot;recommendation_id&quot;:2036733}},{&quot;id&quot;:2036735,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for VPC Network Firewall Rule Changes&quot;,&quot;view_level&quot;:&quot;2.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:218,&quot;recommendation_id&quot;:2036735}},{&quot;id&quot;:2036737,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for VPC Network Route Changes&quot;,&quot;view_level&quot;:&quot;2.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:218,&quot;recommendation_id&quot;:2036737}},{&quot;id&quot;:2036740,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for VPC Network Changes&quot;,&quot;view_level&quot;:&quot;2.9&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:218,&quot;recommendation_id&quot;:2036740}},{&quot;id&quot;:2036742,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for Cloud Storage IAM Permission Changes&quot;,&quot;view_level&quot;:&quot;2.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:218,&quot;recommendation_id&quot;:2036742}},{&quot;id&quot;:2036744,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Log Metric Filter and Alerts Exist for SQL Instance Configuration Changes&quot;,&quot;view_level&quot;:&quot;2.11&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:218,&quot;recommendation_id&quot;:2036744}},{&quot;id&quot;:2036750,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure &#039;Access Transparency&#039; is &#039;Enabled&#039;&quot;,&quot;view_level&quot;:&quot;2.14&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:218,&quot;recommendation_id&quot;:2036750}},{&quot;id&quot;:2036762,&quot;section_id&quot;:1260478,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure \u2018Log_error_verbosity\u2019 Database Flag for Cloud SQL PostgreSQL Instance Is Set to \u2018DEFAULT\u2019 or Stricter&quot;,&quot;view_level&quot;:&quot;6.2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:218,&quot;recommendation_id&quot;:2036762}},{&quot;id&quot;:2036764,&quot;section_id&quot;:1260478,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the \u2018Log_connections\u2019 Database Flag for Cloud SQL PostgreSQL Instance Is Set to \u2018On\u2019&quot;,&quot;view_level&quot;:&quot;6.2.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:218,&quot;recommendation_id&quot;:2036764}},{&quot;id&quot;:2036766,&quot;section_id&quot;:1260478,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the \u2018Log_disconnections\u2019 Database Flag for Cloud SQL PostgreSQL Instance Is Set to \u2018On\u2019&quot;,&quot;view_level&quot;:&quot;6.2.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:218,&quot;recommendation_id&quot;:2036766}},{&quot;id&quot;:2036768,&quot;section_id&quot;:1260478,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure \u2018Log_statement\u2019 Database Flag for Cloud SQL PostgreSQL Instance Is Set Appropriately&quot;,&quot;view_level&quot;:&quot;6.2.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:218,&quot;recommendation_id&quot;:2036768}},{&quot;id&quot;:2036771,&quot;section_id&quot;:1260478,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure that the \u2018Log_min_messages\u2019 Flag for a Cloud SQL PostgreSQL Instance is set at minimum to &#039;Warning&#039;&quot;,&quot;view_level&quot;:&quot;6.2.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:218,&quot;recommendation_id&quot;:2036771}},{&quot;id&quot;:2036773,&quot;section_id&quot;:1260478,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure \u2018Log_min_error_statement\u2019 Database Flag for Cloud SQL PostgreSQL Instance Is Set to \u2018Error\u2019 or Stricter&quot;,&quot;view_level&quot;:&quot;6.2.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:218,&quot;recommendation_id&quot;:2036773}},{&quot;id&quot;:2036775,&quot;section_id&quot;:1260478,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the \u2018Log_min_duration_statement\u2019 Database Flag for Cloud SQL PostgreSQL Instance Is Set to \u2018-1\u2032 (Disabled)&quot;,&quot;view_level&quot;:&quot;6.2.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:218,&quot;recommendation_id&quot;:2036775}},{&quot;id&quot;:2036777,&quot;section_id&quot;:1260478,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That &#039;cloudsql.enable_pgaudit&#039; Database Flag for each Cloud Sql Postgresql Instance Is Set to &#039;on&#039; For Centralized Logging&quot;,&quot;view_level&quot;:&quot;6.2.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:218,&quot;recommendation_id&quot;:2036777}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>6.4</td>
+            <td>
+                                    Ensure adequate storage for logs
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 6.4 Ensure adequate storage for logs (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036726,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Sinks Are Configured for All Log Entries&quot;,&quot;view_level&quot;:&quot;2.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:219,&quot;recommendation_id&quot;:2036726}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>6.5</td>
+            <td>
+                                    Central Log Management
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 6.5 Central Log Management (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036777,&quot;section_id&quot;:1260478,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That &#039;cloudsql.enable_pgaudit&#039; Database Flag for each Cloud Sql Postgresql Instance Is Set to &#039;on&#039; For Centralized Logging&quot;,&quot;view_level&quot;:&quot;6.2.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:220,&quot;recommendation_id&quot;:2036777}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>6.7</td>
+            <td>
+                                    Regularly Review Logs
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 6.7 Regularly Review Logs (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036723,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud Audit Logging Is Configured Properly&quot;,&quot;view_level&quot;:&quot;2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:222,&quot;recommendation_id&quot;:2036723}},{&quot;id&quot;:2036746,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud DNS Logging Is Enabled for All VPC Networks&quot;,&quot;view_level&quot;:&quot;2.12&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:222,&quot;recommendation_id&quot;:2036746}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>8.7</td>
+            <td>
+                                    Enable DNS Query Logging
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 8.7 Enable DNS Query Logging (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036746,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud DNS Logging Is Enabled for All VPC Networks&quot;,&quot;view_level&quot;:&quot;2.12&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:242,&quot;recommendation_id&quot;:2036746}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>9.2</td>
+            <td>
+                                    Ensure Only Approved Ports, Protocols and Services Are Running
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 9.2 Ensure Only Approved Ports, Protocols and Services Are Running (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036741,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That SSH Access Is Restricted From the Internet&quot;,&quot;view_level&quot;:&quot;3.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:2036741}},{&quot;id&quot;:2036743,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That RDP Access Is Restricted From the Internet&quot;,&quot;view_level&quot;:&quot;3.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:2036743}},{&quot;id&quot;:2036767,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure \u2018Enable Connecting to Serial Ports\u2019 Is Not Enabled for VM Instance&quot;,&quot;view_level&quot;:&quot;4.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:2036767}},{&quot;id&quot;:2036785,&quot;section_id&quot;:1260479,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure &#039;remote access&#039; database flag for Cloud SQL SQL Server instance is set to &#039;off&#039;&quot;,&quot;view_level&quot;:&quot;6.3.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:2036785}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>9.5</td>
+            <td>
+                                    Implement Application Firewalls
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 9.5 Implement Application Firewalls (Version 7)"
+                        recommendations="[{&quot;id&quot;:2570645,&quot;section_id&quot;:1260478,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Instance IP assignment is set to private&quot;,&quot;view_level&quot;:&quot;6.2.9&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:249,&quot;recommendation_id&quot;:2570645}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>10.1</td>
+            <td>
+                                    Ensure Regular Automated Back Ups
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 10.1 Ensure Regular Automated Back Ups (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036791,&quot;section_id&quot;:1260474,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud SQL Database Instances Are Configured With Automated Backups&quot;,&quot;view_level&quot;:&quot;6.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:251,&quot;recommendation_id&quot;:2036791}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>11.1</td>
+            <td>
+                                    Maintain Standard Security Configurations for Network Devices
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 11.1 Maintain Standard Security Configurations for Network Devices (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036732,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Default Network Does Not Exist in a Project&quot;,&quot;view_level&quot;:&quot;3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:257,&quot;recommendation_id&quot;:2036732}},{&quot;id&quot;:2036734,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Legacy Networks Do Not Exist for Older Projects&quot;,&quot;view_level&quot;:&quot;3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:257,&quot;recommendation_id&quot;:2036734}},{&quot;id&quot;:2036736,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That DNSSEC Is Enabled for Cloud DNS&quot;,&quot;view_level&quot;:&quot;3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:257,&quot;recommendation_id&quot;:2036736}},{&quot;id&quot;:2036738,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That RSASHA1 Is Not Used for the Key-Signing Key in Cloud DNS DNSSEC&quot;,&quot;view_level&quot;:&quot;3.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:257,&quot;recommendation_id&quot;:2036738}},{&quot;id&quot;:2036739,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That RSASHA1 Is Not Used for the Zone-Signing Key in Cloud DNS DNSSEC&quot;,&quot;view_level&quot;:&quot;3.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:257,&quot;recommendation_id&quot;:2036739}},{&quot;id&quot;:2036769,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That IP Forwarding Is Not Enabled on Instances&quot;,&quot;view_level&quot;:&quot;4.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:257,&quot;recommendation_id&quot;:2036769}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>11.2</td>
+            <td>
+                                    Document Traffic Configuration Rules
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 11.2 Document Traffic Configuration Rules (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036748,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Cloud Asset Inventory Is Enabled&quot;,&quot;view_level&quot;:&quot;2.13&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:258,&quot;recommendation_id&quot;:2036748}},{&quot;id&quot;:2036769,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That IP Forwarding Is Not Enabled on Instances&quot;,&quot;view_level&quot;:&quot;4.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:258,&quot;recommendation_id&quot;:2036769}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>12.4</td>
+            <td>
+                                    Deny Communication over Unauthorized Ports
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 12.4 Deny Communication over Unauthorized Ports (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036741,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That SSH Access Is Restricted From the Internet&quot;,&quot;view_level&quot;:&quot;3.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:268,&quot;recommendation_id&quot;:2036741}},{&quot;id&quot;:2036743,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That RDP Access Is Restricted From the Internet&quot;,&quot;view_level&quot;:&quot;3.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:268,&quot;recommendation_id&quot;:2036743}},{&quot;id&quot;:2036758,&quot;section_id&quot;:1260477,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud Storage Bucket Is Not Anonymously or Publicly Accessible&quot;,&quot;view_level&quot;:&quot;5.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:268,&quot;recommendation_id&quot;:2036758}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>12.8</td>
+            <td>
+                                    Deploy NetFlow Collection on Networking Boundary Devices
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 12.8 Deploy NetFlow Collection on Networking Boundary Devices (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036745,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure that VPC Flow Logs is Enabled for Every Subnet in a VPC Network&quot;,&quot;view_level&quot;:&quot;3.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:272,&quot;recommendation_id&quot;:2036745}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>14.4</td>
+            <td>
+                                    Encrypt All Sensitive Information in Transit
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 14.4 Encrypt All Sensitive Information in Transit (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036747,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure No HTTPS or SSL Proxy Load Balancers Permit SSL Policies With Weak Cipher Suites&quot;,&quot;view_level&quot;:&quot;3.9&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:291,&quot;recommendation_id&quot;:2036747}},{&quot;id&quot;:2036788,&quot;section_id&quot;:1260474,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Cloud SQL Database Instance Requires All Incoming Connections To Use SSL&quot;,&quot;view_level&quot;:&quot;6.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:291,&quot;recommendation_id&quot;:2036788}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>14.6</td>
+            <td>
+                                    Protect Information through  Access Control Lists
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 14.6 Protect Information through  Access Control Lists (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036714,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That IAM Users Are Not Assigned the Service Account User or Service Account Token Creator Roles at Project Level&quot;,&quot;view_level&quot;:&quot;1.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:2036714}},{&quot;id&quot;:2036716,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Separation of Duties Is Enforced While Assigning Service Account Related Roles to Users&quot;,&quot;view_level&quot;:&quot;1.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:2036716}},{&quot;id&quot;:2036717,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud KMS Cryptokeys Are Not Anonymously or Publicly Accessible&quot;,&quot;view_level&quot;:&quot;1.9&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:2036717}},{&quot;id&quot;:2036719,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Separation of Duties Is Enforced While Assigning KMS Related Roles to Users&quot;,&quot;view_level&quot;:&quot;1.11&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:2036719}},{&quot;id&quot;:2036728,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Retention Policies on Cloud Storage Buckets Used for Exporting Logs Are Configured Using Bucket Lock&quot;,&quot;view_level&quot;:&quot;2.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:2036728}},{&quot;id&quot;:2036751,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure &#039;Access Approval&#039; is &#039;Enabled&#039;&quot;,&quot;view_level&quot;:&quot;2.15&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:2036751}},{&quot;id&quot;:2036776,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Compute Instances Do Not Have Public IP Addresses&quot;,&quot;view_level&quot;:&quot;4.9&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:2036776}},{&quot;id&quot;:2036763,&quot;section_id&quot;:1260477,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud Storage Buckets Have Uniform Bucket-Level Access Enabled&quot;,&quot;view_level&quot;:&quot;5.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:2036763}},{&quot;id&quot;:2036755,&quot;section_id&quot;:1260475,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure \u2018Skip_show_database\u2019 Database Flag for Cloud SQL MySQL Instance Is Set to \u2018On\u2019&quot;,&quot;view_level&quot;:&quot;6.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:2036755}},{&quot;id&quot;:2036781,&quot;section_id&quot;:1260479,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure that the &#039;cross db ownership chaining&#039; database flag for Cloud SQL SQL Server instance is set to &#039;off&#039;&quot;,&quot;view_level&quot;:&quot;6.3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:2036781}},{&quot;id&quot;:2036787,&quot;section_id&quot;:1260479,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure that the &#039;contained database authentication&#039; database flag for Cloud SQL on the SQL Server instance is set to &#039;off&#039;&quot;,&quot;view_level&quot;:&quot;6.3.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:2036787}},{&quot;id&quot;:2036789,&quot;section_id&quot;:1260474,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud SQL Database Instances Do Not Implicitly Whitelist All Public IP Addresses&quot;,&quot;view_level&quot;:&quot;6.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:2036789}},{&quot;id&quot;:2036790,&quot;section_id&quot;:1260474,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Cloud SQL Database Instances Do Not Have Public IPs&quot;,&quot;view_level&quot;:&quot;6.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:2036790}},{&quot;id&quot;:2036754,&quot;section_id&quot;:1260476,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That BigQuery Datasets Are Not Anonymously or Publicly Accessible&quot;,&quot;view_level&quot;:&quot;7.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:2036754}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>14.8</td>
+            <td>
+                                    Encrypt Sensitive Information at Rest
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 14.8 Encrypt Sensitive Information at Rest (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036718,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure KMS Encryption Keys Are Rotated Within a Period of 90 Days&quot;,&quot;view_level&quot;:&quot;1.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:295,&quot;recommendation_id&quot;:2036718}},{&quot;id&quot;:2036727,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure that Dataproc Cluster is encrypted using Customer-Managed Encryption Key&quot;,&quot;view_level&quot;:&quot;1.17&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:295,&quot;recommendation_id&quot;:2036727}},{&quot;id&quot;:2036729,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Secrets are Not Stored in Cloud Functions Environment Variables by Using Secret Manager&quot;,&quot;view_level&quot;:&quot;1.18&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:295,&quot;recommendation_id&quot;:2036729}},{&quot;id&quot;:2036772,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure VM Disks for Critical VMs Are Encrypted With Customer-Supplied Encryption Keys (CSEK)&quot;,&quot;view_level&quot;:&quot;4.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:295,&quot;recommendation_id&quot;:2036772}},{&quot;id&quot;:2036780,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That Compute Instances Have Confidential Computing Enabled&quot;,&quot;view_level&quot;:&quot;4.11&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:295,&quot;recommendation_id&quot;:2036780}},{&quot;id&quot;:2036756,&quot;section_id&quot;:1260476,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That All BigQuery Tables Are Encrypted With Customer-Managed Encryption Key (CMEK)&quot;,&quot;view_level&quot;:&quot;7.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:295,&quot;recommendation_id&quot;:2036756}},{&quot;id&quot;:2036760,&quot;section_id&quot;:1260476,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That a Default Customer-Managed Encryption Key (CMEK) Is Specified for All BigQuery Data Sets&quot;,&quot;view_level&quot;:&quot;7.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:295,&quot;recommendation_id&quot;:2036760}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>16.1</td>
+            <td>
+                                    Maintain an Inventory of Authentication Systems
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 16.1 Maintain an Inventory of Authentication Systems (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036748,&quot;section_id&quot;:1260471,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Cloud Asset Inventory Is Enabled&quot;,&quot;view_level&quot;:&quot;2.13&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:309,&quot;recommendation_id&quot;:2036748}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>16.2</td>
+            <td>
+                                    Configure Centralized Point of Authentication
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 16.2 Configure Centralized Point of Authentication (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036709,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure that Corporate Login Credentials are Used&quot;,&quot;view_level&quot;:&quot;1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:310,&quot;recommendation_id&quot;:2036709}},{&quot;id&quot;:2036749,&quot;section_id&quot;:1260472,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Use Identity Aware Proxy (IAP) to Ensure Only Traffic From Google IP Addresses are &#039;Allowed&#039;&quot;,&quot;view_level&quot;:&quot;3.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:310,&quot;recommendation_id&quot;:2036749}},{&quot;id&quot;:2036765,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Oslogin Is Enabled for a Project&quot;,&quot;view_level&quot;:&quot;4.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:310,&quot;recommendation_id&quot;:2036765}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>16.3</td>
+            <td>
+                                    Require Multi-factor Authentication
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 16.3 Require Multi-factor Authentication (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036710,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure that Multi-Factor Authentication is &#039;Enabled&#039; for All Non-Service Accounts&quot;,&quot;view_level&quot;:&quot;1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:311,&quot;recommendation_id&quot;:2036710}},{&quot;id&quot;:2036711,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure that Security Key Enforcement is Enabled for All Admin Accounts&quot;,&quot;view_level&quot;:&quot;1.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:311,&quot;recommendation_id&quot;:2036711}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>16.4</td>
+            <td>
+                                    Encrypt or Hash all Authentication Credentials
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 16.4 Encrypt or Hash all Authentication Credentials (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036729,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Secrets are Not Stored in Cloud Functions Environment Variables by Using Secret Manager&quot;,&quot;view_level&quot;:&quot;1.18&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:312,&quot;recommendation_id&quot;:2036729}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>16.5</td>
+            <td>
+                                    Encrypt Transmittal of Username and Authentication Credentials
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 16.5 Encrypt Transmittal of Username and Authentication Credentials (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036761,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure \u201cBlock Project-Wide SSH Keys\u201d Is Enabled for VM Instances&quot;,&quot;view_level&quot;:&quot;4.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:313,&quot;recommendation_id&quot;:2036761}},{&quot;id&quot;:2036788,&quot;section_id&quot;:1260474,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That the Cloud SQL Database Instance Requires All Incoming Connections To Use SSL&quot;,&quot;view_level&quot;:&quot;6.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:313,&quot;recommendation_id&quot;:2036788}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>16.8</td>
+            <td>
+                                    Disable Any Unassociated Accounts
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 16.8 Disable Any Unassociated Accounts (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036720,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure API Keys Only Exist for Active Services&quot;,&quot;view_level&quot;:&quot;1.12&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:316,&quot;recommendation_id&quot;:2036720}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>18.5</td>
+            <td>
+                                    Use Only Standardized and Extensively Reviewed Encryption Algorithms
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 18.5 Use Only Standardized and Extensively Reviewed Encryption Algorithms (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036778,&quot;section_id&quot;:1260473,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure That App Engine Applications Enforce HTTPS Connections&quot;,&quot;view_level&quot;:&quot;4.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:337,&quot;recommendation_id&quot;:2036778}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>19.5</td>
+            <td>
+                                    Maintain Contact Information For Reporting Security Incidents
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 19.5 Maintain Contact Information For Reporting Security Incidents (Version 7)"
+                        recommendations="[{&quot;id&quot;:2036725,&quot;section_id&quot;:1260470,&quot;benchmark_id&quot;:9562,&quot;title&quot;:&quot;Ensure Essential Contacts is Configured for Organization&quot;,&quot;view_level&quot;:&quot;1.16&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:349,&quot;recommendation_id&quot;:2036725}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+        </tbody>
+</table>
+                </div>
+            
+            </div>
+					</div>
+				</div>
+				<footer>
+											<div class="footer-bottom">
+	<div class="container-fluid inner">
+		<hr>
+		<div class="row">
+			<div class="col-lg-4 col-lg-offset-4">
+				<p>&copy; 2025 <a href="http://cisecurity.org" target="_blank" rel="noopener noreferrer"><img src="/images/Logo_Text_Stacked_TMR.png" alt="CIS LOGO" height="50"></a></p></div>
+			<div class="col-lg-4"></div>
+		</div>
+	</div>
+</div>
+									</footer>
+			</div>
+					</div>
+			</div>
+		</div>
+	<div id="scripts">
+    <script  nonce="OKhU5KtL3tdgrc7eAbee7u0reXIjeUVu"  src="/js/all.js?id=8eaeec183841624eda364e56ae334d4d"></script>
+    <script  nonce="OKhU5KtL3tdgrc7eAbee7u0reXIjeUVu"  src="/js/app.js?id=0b081b644cd4f33e40ae9552c27525fa"></script>
+</div>
+<script  nonce="OKhU5KtL3tdgrc7eAbee7u0reXIjeUVu" >
+	var isUserLoggedIn = true; 
+		
+</script>
+</body>
+</html>

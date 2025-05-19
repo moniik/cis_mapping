@@ -1,0 +1,1605 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- JS script for cached pages redirection if the user is not authorized-->
+    <script  nonce="hUul8VHjrfiwqEGMv7q9ZKFL5D0HiGN3" >
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted || performance.getEntriesByType("navigation")[0].transferSize === 0) {
+                var domain = 'https://workbench.cisecurity.org/';
+                $.ajax({
+                    url:  "/is-authorized",
+                    type: "GET",
+                    success: function(data) {
+                        if(data.status === false) {
+                            window.history.pushState(null, "", window.location.href);
+                            window.history.back();
+                            window.history.forward();
+                            window.location = domain;
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+    <!-- End of JS script for cached pages redirection -->
+	<script src="/livewire/livewire.js?id=90730a3b0e7144480175" data-turbo-eval="false" data-turbolinks-eval="false" nonce="hUul8VHjrfiwqEGMv7q9ZKFL5D0HiGN3"></script><script data-turbo-eval="false" data-turbolinks-eval="false" nonce="hUul8VHjrfiwqEGMv7q9ZKFL5D0HiGN3">window.livewire = new Livewire({"nonce":"hUul8VHjrfiwqEGMv7q9ZKFL5D0HiGN3"});window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = 'hA1tS86sp9wUp6zae41Zxgwa4xSPzpd5wUDi34f4';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
+	<title>CIS WorkBench / Benchmarks Controls</title>
+			<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="csrf-token" content="hA1tS86sp9wUp6zae41Zxgwa4xSPzpd5wUDi34f4">
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="/images/CIS_Workbench_logo.png">
+
+				<link media="all" type="text/css" rel="stylesheet" href="/css/all.css?id=3e068e3c82753644a420b1bb17307d6f">
+		<link media="all" type="text/css" rel="stylesheet" href="/css/tailwind.css?id=d7bec9a192a05d946eadb023b096d0db">
+
+	<!-- Google Tag Manager -->
+    <script  nonce="hUul8VHjrfiwqEGMv7q9ZKFL5D0HiGN3" >(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;var n=d.querySelector('[nonce]');
+            n&&j.setAttribute('nonce',n.nonce||n.getAttribute('nonce'));f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PMFL2DG');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMFL2DG" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+<div id="app" v-pre>
+		<wb-user-feedback
+		url="benchmarks/18636/controls"
+		referer-url="https://workbench.cisecurity.org/benchmarks/18636"
+		route-name="benchmarks.controls"
+		is-fb-on="1"
+	></wb-user-feedback>
+			<div id="wrapper" class="  ">
+							<div id="sidebar-wrapper">
+					<div id="sidebar-actions">
+													<a href="#" class="offcanvas-slide pull-right"  aria-label="Hide side bar" rel="hide-sidebar"><span class="fa fa-caret-square-o-left"></span></a>
+							<a href="#" class="offcanvas-slide pull-right" rel="show-sidebar" style="display: none;"><span class="fa fa-caret-square-o-right"></span></a>
+												<div class="clearfix"></div>
+					</div>
+					<div id="sidebar-inner">
+						<div id="sidebar-content">
+								<a href="https://workbench.cisecurity.org/communities/20" class="block flex hover:no-underline">
+        <span class="fa fa-3x fa-globe mr-3"></span> CIS Apple macOS Benchmark
+    </a>
+
+<a href="https://workbench.cisecurity.org/benchmarks/18636" title="CIS Apple macOS 15.0 Sequoia Benchmark v1.0.0" class="inline-block mt-4 truncate hover:no-underline" style="width: 280px;">
+    <span class="fa fa-book fa-fw"></span> CIS Apple macOS 15.0 Sequoia Benchmark v1.0.0
+</a>
+
+<div class="flex justify-between">
+                        <a class="" href="https://workbench.cisecurity.org/benchmarks/18636/files">
+                <button class="text-gray-700 border-none bg-warm-gray-100 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-cis-light-500 hover:text-white focus:outline-none focus:ring whitespace-nowrap disabled:opacity-50 my-2" style="width: 125px;">
+    <i class="fa fa-fw fa-file"></i> Files
+</button>
+            </a>
+                    
+    <div></div>
+
+            <a class="" href="https://workbench.cisecurity.org/benchmarks/18636/tickets">
+            <button class="text-gray-700 border-none bg-warm-gray-100 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-cis-light-500 hover:text-white focus:outline-none focus:ring whitespace-nowrap disabled:opacity-50 my-2" style="width: 125px;">
+    <i class="fa fa-fw fa-ticket"></i> Tickets
+</button>
+        </a>
+        </div>
+
+<div class="min-hide mt-4">
+    <wb-nav-tree benchmark-id="18636"></wb-nav-tree>
+</div>
+						</div>
+					</div>
+				</div>
+						<div id="page-content-wrapper">
+							<header class="navbar-fixed-top navbar-prod">
+											<div class="container">
+				<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-logo-header navbar-header">
+			<a class="navbar-brand" href="https://workbench.cisecurity.org">
+				<img class="navbar-logo" src="/images/CIS_Workbench_Spot.png" alt="Security Benchmarks" data-cy="navbar-logo" />
+			</a>
+		</div>
+
+		<div class="navbar-mobile">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+
+		<div class="navbar-collapse">
+			<ul class="nav navbar-nav navbar-main">
+				<li>
+			<a href="https://workbench.cisecurity.org/communities/public" class="community-nav">
+				<span class="fa fa-globe icon-hover">
+					<span class="hover-text hidden-lg">Communities</span>
+				</span>
+				<span class="hidden-sm"> Communities</span>
+			</a>
+		</li>
+		<li>
+		<a href="https://workbench.cisecurity.org/benchmarks" class="benchmarks-nav">
+			<span class="fa fa-book icon-hover">
+				<span class="hover-text hidden-lg">Benchmarks</span>
+			</span>
+			<span class="hidden-sm"> Benchmarks</span>
+		</a>
+	</li>
+	<li>
+		<a href="https://workbench.cisecurity.org/tickets?status=new%7Cinprogress%7Cassigned&sortBy=updated_at&type=desc" class="tickets-nav">
+			<span class="fa fa-ticket icon-hover"><span class="hover-text hidden-lg">Tickets</span></span><span class=" hidden-sm"> Tickets</span>
+		</a>
+	</li>
+	<li>
+		<a href="https://workbench.cisecurity.org/files" class="downloads-nav">
+			<span class="fa fa-download icon-hover"><span class="hover-text hidden-lg">Downloads</span></span><span class="hidden-sm"> Downloads</span>
+		</a>
+	</li>
+
+		
+	<li>
+	<a href="https://workbench.cisecurity.org/support-center"><span class="fa fa-question icon-hover"><span class="hover-text hidden-lg">Support Center</span></span><span class="hidden-sm"> Support Center</span></a>
+</li>
+
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+								<li class="dropdown dropdown-hover user-nav">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown" dusk="user-nav-dropdown">
+		<span class="fa fa-user" style="margin-right: 5px;" aria-hidden="true"></span>kikkawa
+			
+		<span class="caret"></span>
+	</a>
+	<ul class="dropdown-menu" role="menu">
+		<li>
+			<a href="https://workbench.cisecurity.org/user/kikkawa" class="username-nav tour-step-backdrop">
+				<span class="fa fa-fw fa-user"></span> kikkawa
+			</a>
+		</li>
+				<li>
+			<a href="https://workbench.cisecurity.org/notifications">
+				<i class="fa fa-fw fa-bell"></i>
+				Notifications
+
+			</a>
+		</li>
+		<li>
+			<a href="https://workbench.cisecurity.org/notifications?#community_default_settings">
+				<i class="fa fa-fw fa-toggle-on"></i>
+				Notification Settings
+			</a>
+		</li>
+
+		<li class="divider"></li>
+		<li>
+			<form method="POST" action="https://workbench.cisecurity.org/logout" accept-charset="UTF-8" style="margin-bottom: 0;"><input name="_token" type="hidden" value="hA1tS86sp9wUp6zae41Zxgwa4xSPzpd5wUDi34f4">
+			<button class="btn btn-link" style="padding: 3px 20px; width: 100%; text-align: left; color: #333f48;" type="submit" data-cy="logout">
+				<span class="fa fa-fw fa-sign-out"></span> Log Out
+			</button>
+			</form>
+		</li>
+	</ul>
+</li>
+
+			</ul>
+		</div>
+	</div>
+</div>
+			</div>					
+				</header>
+				<div id="content" >
+					<div class="container-fluid">
+																									    			<div class="sticky flex justify-between bg-white z-10 py-5 shadow-md" style="margin: 0 -20px 0 -20px; padding-left: 20px; padding-right: 20px; width: calc(100% - 180px); position: fixed;">
+    <div class="flex -ml-2 sticky-flex-pos">
+        <button class="text-gray-700 border-none bg-warm-gray-100 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-cis-light-500 hover:text-white focus:outline-none focus:ring whitespace-nowrap disabled:opacity-50 m-2" style="max-height: 30px;" aria-label="Previous" disabled="disabled">
+    <i class="fa fa-caret-left"></i>
+</button>
+
+<button class="text-gray-700 border-none bg-warm-gray-100 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-cis-light-500 hover:text-white focus:outline-none focus:ring whitespace-nowrap disabled:opacity-50 m-2" style="max-height: 30px;" aria-label="Next" disabled="disabled">
+    <i class="fa fa-caret-right"></i>
+</button>
+
+			<button class="text-gray-700 border-none bg-warm-gray-100 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-cis-light-500 hover:text-white focus:outline-none focus:ring whitespace-nowrap disabled:opacity-50 m-2" style="max-height: 30px;" disabled="disabled">
+    Edit
+</button>
+	
+	<button class="text-gray-700 border-none bg-warm-gray-100 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-cis-light-500 hover:text-white focus:outline-none focus:ring whitespace-nowrap disabled:opacity-50 m-2" style="max-height: 30px;" disabled="disabled">
+    Propose Change
+</button>
+
+	<button class="text-gray-700 border-none bg-warm-gray-100 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-cis-light-500 hover:text-white focus:outline-none focus:ring whitespace-nowrap disabled:opacity-50 m-2" style="max-height: 30px;" disabled="disabled">
+    Fork
+</button>
+
+	<button class="text-gray-700 border-none bg-warm-gray-100 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-cis-light-500 hover:text-white focus:outline-none focus:ring whitespace-nowrap disabled:opacity-50 m-2" style="max-height: 30px;" disabled="disabled">
+    Duplicate
+</button>
+
+    
+                            <button class="text-gray-700 border-none bg-warm-gray-100 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-cis-light-500 hover:text-white focus:outline-none focus:ring whitespace-nowrap disabled:opacity-50 m-2" style="max-height: 30px;" disabled="disabled">
+    Export
+</button>
+            
+                                <button class="text-gray-700 border-none bg-warm-gray-100 rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-cis-light-500 hover:text-white focus:outline-none focus:ring whitespace-nowrap disabled:opacity-50 m-2" style="max-height: 30px;" disabled="disabled">
+    Profiles
+</button>
+        
+                    <div class="ml-3 mt-2" style="height: auto;">
+                <wb-drop-down drop-down-class="benchmark-nav-drop-down" trigger-class="block hover:bg-warm-gray-100 rounded-md px-4 py-2">
+                    <div class="py-2 px-8 rounded-md bg-white shadow hover:no-underline" style="width: 15rem; display: none;">
+                        <a class="block w-full no-underline whitespace-nowrap py-3 focus:outline-none hover:no-underline" href="https://workbench.cisecurity.org/benchmarks/18636/parent-tree">
+    Parent Tree
+</a>
+
+
+
+
+    <a class="block w-full no-underline whitespace-nowrap py-3 focus:outline-none hover:no-underline" href="https://workbench.cisecurity.org/benchmarks/18636/controls">
+    Controls Mappings
+</a>
+
+
+                                            </div>
+                </wb-drop-down>
+            </div>
+        
+            </div>
+</div>
+<wb-table-listing-modals></wb-table-listing-modals>
+
+	
+    <div class="-mt-6 mb-10" style=" margin-top:85px;">
+
+        <h1><strong>Controls mapped to Benchmark</strong></h1>
+
+    </div>
+    <div class="w-full max-w-full">
+        
+            <nav class="flex mb-12">
+                
+                                    <a href="#version_8" data-tab="version_8" data-group="version"
+                       class="navigation-tabs-links version-links nav-tabs-link-active">
+                        Version 8
+                    </a>
+                                    <a href="#version_7" data-tab="version_7" data-group="version"
+                       class="navigation-tabs-links version-links nav-tabs-link-passive">
+                        Version 7
+                    </a>
+                                <div class="nav-tabs-link-passive flex-grow"></div>
+            </nav>
+
+                            <div id="version_8"
+                     class="version-tabs ">
+                    <div class="flex justify-between items-baseline">
+    <div>
+        <h3>CIS Controls Version 8</h3>
+    </div>
+    <div class="pr-7">
+            </div>
+
+</div>
+<table class="table table-striped table-hover ">
+    <thead>
+    <tr>
+        <th>Control</th>
+        <th>Title</th>
+        <th class="text-center">IG 1</th>
+        <th class="text-center">IG 2</th>
+        <th class="text-center">IG 3</th>
+        <th class="text-center">Linked Recommendations</th>
+    </tr>
+    </thead>
+    <tbody>
+            <tr>
+            <td>0.0</td>
+            <td>
+                                    Explicitly Not Mapped
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 0.0 Explicitly Not Mapped (Version 8)"
+                        recommendations="[{&quot;id&quot;:4666880,&quot;section_id&quot;:2841875,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit iPhone Mirroring&quot;,&quot;view_level&quot;:&quot;2.7.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:534,&quot;recommendation_id&quot;:4666880}},{&quot;id&quot;:4596729,&quot;section_id&quot;:2841886,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Game Center Settings&quot;,&quot;view_level&quot;:&quot;2.14.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:534,&quot;recommendation_id&quot;:4596729}},{&quot;id&quot;:4596731,&quot;section_id&quot;:2841888,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Wallet &amp; Apple Pay Settings&quot;,&quot;view_level&quot;:&quot;2.16.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:534,&quot;recommendation_id&quot;:4596731}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>1.1</td>
+            <td>
+                                    Establish and Maintain Detailed Enterprise Asset Inventory
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 1.1 Establish and Maintain Detailed Enterprise Asset Inventory (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596657,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Computer Name Does Not Contain PII or Protected Organizational Information&quot;,&quot;view_level&quot;:&quot;2.3.3.12&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:363,&quot;recommendation_id&quot;:4596657}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>2.1</td>
+            <td>
+                                    Establish and Maintain a Software Inventory
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 2.1 Establish and Maintain a Software Inventory (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596652,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Software Inventory&quot;,&quot;view_level&quot;:&quot;3.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:369,&quot;recommendation_id&quot;:4596652}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>2.3</td>
+            <td>
+                                    Address Unauthorized Software
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 2.3 Address Unauthorized Software (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596678,&quot;section_id&quot;:2841870,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Location Services Access&quot;,&quot;view_level&quot;:&quot;2.6.1.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:371,&quot;recommendation_id&quot;:4596678}},{&quot;id&quot;:4596662,&quot;section_id&quot;:2841865,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure System Integrity Protection Status (SIP) Is Enabled&quot;,&quot;view_level&quot;:&quot;5.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:371,&quot;recommendation_id&quot;:4596662}},{&quot;id&quot;:4596663,&quot;section_id&quot;:2841865,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Apple Mobile File Integrity (AMFI) Is Enabled&quot;,&quot;view_level&quot;:&quot;5.1.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:371,&quot;recommendation_id&quot;:4596663}},{&quot;id&quot;:4596688,&quot;section_id&quot;:2841873,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Show All Filename Extensions Setting is Enabled&quot;,&quot;view_level&quot;:&quot;6.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:371,&quot;recommendation_id&quot;:4596688}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>2.6</td>
+            <td>
+                                    Allowlist Authorized Libraries
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 2.6 Allowlist Authorized Libraries (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596662,&quot;section_id&quot;:2841865,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure System Integrity Protection Status (SIP) Is Enabled&quot;,&quot;view_level&quot;:&quot;5.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:374,&quot;recommendation_id&quot;:4596662}},{&quot;id&quot;:4596663,&quot;section_id&quot;:2841865,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Apple Mobile File Integrity (AMFI) Is Enabled&quot;,&quot;view_level&quot;:&quot;5.1.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:374,&quot;recommendation_id&quot;:4596663}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>3.3</td>
+            <td>
+                                    Configure Data Access Control Lists
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 3.3 Configure Data Access Control Lists (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596655,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Bluetooth Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.11&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:4596655}},{&quot;id&quot;:4596726,&quot;section_id&quot;:2841884,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Guest Access to Shared Folders Is Disabled&quot;,&quot;view_level&quot;:&quot;2.12.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:4596726}},{&quot;id&quot;:4596648,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Access to Audit Records Is Controlled&quot;,&quot;view_level&quot;:&quot;3.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:4596648}},{&quot;id&quot;:4596660,&quot;section_id&quot;:2841865,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Home Folders Are Secure&quot;,&quot;view_level&quot;:&quot;5.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:4596660}},{&quot;id&quot;:4596666,&quot;section_id&quot;:2841865,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Appropriate Permissions Are Enabled for System Wide Applications&quot;,&quot;view_level&quot;:&quot;5.1.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:4596666}},{&quot;id&quot;:4596668,&quot;section_id&quot;:2841865,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure No World Writable Folders Exist in the System Folder&quot;,&quot;view_level&quot;:&quot;5.1.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:4596668}},{&quot;id&quot;:4596670,&quot;section_id&quot;:2841865,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure No World Writable Folders Exist in the Library Folder&quot;,&quot;view_level&quot;:&quot;5.1.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:379,&quot;recommendation_id&quot;:4596670}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>3.6</td>
+            <td>
+                                    Encrypt Data on End-User Devices
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 3.6 Encrypt Data on End-User Devices (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596661,&quot;section_id&quot;:2841863,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Time Machine Volumes Are Encrypted If Time Machine Is Enabled&quot;,&quot;view_level&quot;:&quot;2.3.4.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:382,&quot;recommendation_id&quot;:4596661}},{&quot;id&quot;:4596687,&quot;section_id&quot;:2841869,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure FileVault Is Enabled&quot;,&quot;view_level&quot;:&quot;2.6.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:382,&quot;recommendation_id&quot;:4596687}},{&quot;id&quot;:4596665,&quot;section_id&quot;:2841865,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Signed System Volume (SSV) Is Enabled&quot;,&quot;view_level&quot;:&quot;5.1.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:382,&quot;recommendation_id&quot;:4596665}},{&quot;id&quot;:4596689,&quot;section_id&quot;:2841874,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure all user storage APFS volumes are encrypted&quot;,&quot;view_level&quot;:&quot;5.3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:382,&quot;recommendation_id&quot;:4596689}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>3.9</td>
+            <td>
+                                    Encrypt Data on Removable Media
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 3.9 Encrypt Data on Removable Media (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596691,&quot;section_id&quot;:2841874,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure all user storage CoreStorage volumes are encrypted&quot;,&quot;view_level&quot;:&quot;5.3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:385,&quot;recommendation_id&quot;:4596691}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>3.11</td>
+            <td>
+                                    Encrypt Sensitive Data at Rest
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 3.11 Encrypt Sensitive Data at Rest (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596661,&quot;section_id&quot;:2841863,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Time Machine Volumes Are Encrypted If Time Machine Is Enabled&quot;,&quot;view_level&quot;:&quot;2.3.4.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:386,&quot;recommendation_id&quot;:4596661}},{&quot;id&quot;:4596687,&quot;section_id&quot;:2841869,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure FileVault Is Enabled&quot;,&quot;view_level&quot;:&quot;2.6.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:386,&quot;recommendation_id&quot;:4596687}},{&quot;id&quot;:4596665,&quot;section_id&quot;:2841865,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Signed System Volume (SSV) Is Enabled&quot;,&quot;view_level&quot;:&quot;5.1.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:386,&quot;recommendation_id&quot;:4596665}},{&quot;id&quot;:4596689,&quot;section_id&quot;:2841874,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure all user storage APFS volumes are encrypted&quot;,&quot;view_level&quot;:&quot;5.3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:386,&quot;recommendation_id&quot;:4596689}},{&quot;id&quot;:4596691,&quot;section_id&quot;:2841874,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure all user storage CoreStorage volumes are encrypted&quot;,&quot;view_level&quot;:&quot;5.3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:386,&quot;recommendation_id&quot;:4596691}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>3.14</td>
+            <td>
+                                    Log Sensitive Data Access
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 3.14 Log Sensitive Data Access (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596642,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Security Auditing Flags For User-Attributable Events Are Configured Per Local Organizational Requirements&quot;,&quot;view_level&quot;:&quot;3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:389,&quot;recommendation_id&quot;:4596642}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.1</td>
+            <td>
+                                    Establish and Maintain a Secure Configuration Process
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.1 Establish and Maintain a Secure Configuration Process (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596638,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure the System is Managed by a Mobile Device Management (MDM) Software&quot;,&quot;view_level&quot;:&quot;1.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596638}},{&quot;id&quot;:4596616,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit iCloud Keychain&quot;,&quot;view_level&quot;:&quot;2.1.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596616}},{&quot;id&quot;:4596617,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit iCloud Drive&quot;,&quot;view_level&quot;:&quot;2.1.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596617}},{&quot;id&quot;:4596618,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure iCloud Drive Document and Desktop Sync Is Disabled&quot;,&quot;view_level&quot;:&quot;2.1.1.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596618}},{&quot;id&quot;:4596620,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Freeform Sync to iCloud&quot;,&quot;view_level&quot;:&quot;2.1.1.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596620}},{&quot;id&quot;:4596621,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Find My Mac&quot;,&quot;view_level&quot;:&quot;2.1.1.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596621}},{&quot;id&quot;:4596622,&quot;section_id&quot;:2841853,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit App Store Password Settings&quot;,&quot;view_level&quot;:&quot;2.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596622}},{&quot;id&quot;:4596623,&quot;section_id&quot;:2841855,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Firewall Is Enabled&quot;,&quot;view_level&quot;:&quot;2.2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596623}},{&quot;id&quot;:4596625,&quot;section_id&quot;:2841855,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Firewall Stealth Mode Is Enabled&quot;,&quot;view_level&quot;:&quot;2.2.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596625}},{&quot;id&quot;:4596626,&quot;section_id&quot;:2841858,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure AirDrop Is Disabled When Not Actively Transferring Files&quot;,&quot;view_level&quot;:&quot;2.3.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596626}},{&quot;id&quot;:4596628,&quot;section_id&quot;:2841858,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure AirPlay Receiver Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596628}},{&quot;id&quot;:4596635,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure DVD or CD Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596635}},{&quot;id&quot;:4596637,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Screen Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596637}},{&quot;id&quot;:4596639,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure File Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596639}},{&quot;id&quot;:4596641,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Printer Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596641}},{&quot;id&quot;:4596643,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Remote Login Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596643}},{&quot;id&quot;:4596645,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Remote Management Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596645}},{&quot;id&quot;:4596647,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Remote Apple Events Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596647}},{&quot;id&quot;:4596649,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Internet Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596649}},{&quot;id&quot;:4596653,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Media Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596653}},{&quot;id&quot;:4596655,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Bluetooth Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.11&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596655}},{&quot;id&quot;:4596669,&quot;section_id&quot;:2841867,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Siri Settings&quot;,&quot;view_level&quot;:&quot;2.5.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596669}},{&quot;id&quot;:4596671,&quot;section_id&quot;:2841867,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Listen for (Siri) Is Disabled&quot;,&quot;view_level&quot;:&quot;2.5.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596671}},{&quot;id&quot;:4596673,&quot;section_id&quot;:2841870,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Location Services Is Enabled&quot;,&quot;view_level&quot;:&quot;2.6.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596673}},{&quot;id&quot;:4596676,&quot;section_id&quot;:2841870,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure &#039;Show Location Icon in Control Center when System Services Request Your Location&#039; Is Enabled&quot;,&quot;view_level&quot;:&quot;2.6.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596676}},{&quot;id&quot;:4596678,&quot;section_id&quot;:2841870,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Location Services Access&quot;,&quot;view_level&quot;:&quot;2.6.1.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596678}},{&quot;id&quot;:4596679,&quot;section_id&quot;:2841871,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Full Disk Access for Applications&quot;,&quot;view_level&quot;:&quot;2.6.2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596679}},{&quot;id&quot;:4730709,&quot;section_id&quot;:2925527,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Share Mac Analytics Is Disabled&quot;,&quot;view_level&quot;:&quot;2.6.3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4730709}},{&quot;id&quot;:4731246,&quot;section_id&quot;:2925527,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Improve Siri &amp; Dictation Is Disabled&quot;,&quot;view_level&quot;:&quot;2.6.3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4731246}},{&quot;id&quot;:4731783,&quot;section_id&quot;:2925527,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Improve Assistive Voice Features Is Disabled&quot;,&quot;view_level&quot;:&quot;2.6.3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4731783}},{&quot;id&quot;:4738988,&quot;section_id&quot;:2925527,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure &#039;Share with app developers&#039; Is Disabled&quot;,&quot;view_level&quot;:&quot;2.6.3.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4738988}},{&quot;id&quot;:4739244,&quot;section_id&quot;:2925527,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Share iCloud Analytics Is Disabled&quot;,&quot;view_level&quot;:&quot;2.6.3.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4739244}},{&quot;id&quot;:4596692,&quot;section_id&quot;:2841869,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure an Administrator Password Is Required to Access System-Wide Preferences&quot;,&quot;view_level&quot;:&quot;2.6.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596692}},{&quot;id&quot;:4596697,&quot;section_id&quot;:2841877,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Universal Control Settings&quot;,&quot;view_level&quot;:&quot;2.8.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596697}},{&quot;id&quot;:4596700,&quot;section_id&quot;:2841880,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure the OS Is Not Active When Resuming from Standby (Intel)&quot;,&quot;view_level&quot;:&quot;2.9.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596700}},{&quot;id&quot;:4596701,&quot;section_id&quot;:2841880,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Sleep and Display Sleep Is Enabled on Apple Silicon Devices&quot;,&quot;view_level&quot;:&quot;2.9.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596701}},{&quot;id&quot;:4596705,&quot;section_id&quot;:2841879,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Power Nap Is Disabled for Intel Macs&quot;,&quot;view_level&quot;:&quot;2.9.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596705}},{&quot;id&quot;:4596717,&quot;section_id&quot;:2841881,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure a Custom Message for the Login Screen Is Enabled&quot;,&quot;view_level&quot;:&quot;2.10.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596717}},{&quot;id&quot;:4596720,&quot;section_id&quot;:2841881,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Login Window Displays as Name and Password Is Enabled&quot;,&quot;view_level&quot;:&quot;2.10.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596720}},{&quot;id&quot;:4596722,&quot;section_id&quot;:2841881,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Show Password Hints Is Disabled&quot;,&quot;view_level&quot;:&quot;2.10.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596722}},{&quot;id&quot;:4596724,&quot;section_id&quot;:2841883,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Touch ID&quot;,&quot;view_level&quot;:&quot;2.11.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596724}},{&quot;id&quot;:4596730,&quot;section_id&quot;:2841887,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Notification &amp; Focus Settings&quot;,&quot;view_level&quot;:&quot;2.15.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596730}},{&quot;id&quot;:4596732,&quot;section_id&quot;:2841889,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Internet Accounts for Authorized Use&quot;,&quot;view_level&quot;:&quot;2.17.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596732}},{&quot;id&quot;:4596733,&quot;section_id&quot;:2841890,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure On-Device Dictation Is Enabled&quot;,&quot;view_level&quot;:&quot;2.18.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596733}},{&quot;id&quot;:4596654,&quot;section_id&quot;:2841862,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Bonjour Advertising Services Is Disabled&quot;,&quot;view_level&quot;:&quot;4.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596654}},{&quot;id&quot;:4596656,&quot;section_id&quot;:2841862,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure HTTP Server Is Disabled&quot;,&quot;view_level&quot;:&quot;4.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596656}},{&quot;id&quot;:4596658,&quot;section_id&quot;:2841862,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure NFS Server Is Disabled&quot;,&quot;view_level&quot;:&quot;4.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596658}},{&quot;id&quot;:4596706,&quot;section_id&quot;:2841864,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure a Login Window Banner Exists&quot;,&quot;view_level&quot;:&quot;5.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596706}},{&quot;id&quot;:4596709,&quot;section_id&quot;:2841864,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure the Guest Home Folder Does Not Exist&quot;,&quot;view_level&quot;:&quot;5.9&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:391,&quot;recommendation_id&quot;:4596709}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.3</td>
+            <td>
+                                    Configure Automatic Session Locking on Enterprise Assets
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.3 Configure Automatic Session Locking on Enterprise Assets (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596694,&quot;section_id&quot;:2841875,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Screen Saver Corners Are Secure&quot;,&quot;view_level&quot;:&quot;2.7.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:393,&quot;recommendation_id&quot;:4596694}},{&quot;id&quot;:4596713,&quot;section_id&quot;:2841881,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure an Inactivity Interval of 20 Minutes Or Less for the Screen Saver Is Enabled&quot;,&quot;view_level&quot;:&quot;2.10.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:393,&quot;recommendation_id&quot;:4596713}},{&quot;id&quot;:4596693,&quot;section_id&quot;:2841864,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure the Sudo Timeout Period Is Set to Zero&quot;,&quot;view_level&quot;:&quot;5.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:393,&quot;recommendation_id&quot;:4596693}},{&quot;id&quot;:4596695,&quot;section_id&quot;:2841864,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure a Separate Timestamp Is Enabled for Each User\/tty Combo&quot;,&quot;view_level&quot;:&quot;5.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:393,&quot;recommendation_id&quot;:4596695}},{&quot;id&quot;:4596702,&quot;section_id&quot;:2841864,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure an Administrator Account Cannot Login to Another User&#039;s Active and Locked Session&quot;,&quot;view_level&quot;:&quot;5.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:393,&quot;recommendation_id&quot;:4596702}},{&quot;id&quot;:4907350,&quot;section_id&quot;:2841864,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Logging Is Enabled for Sudo&quot;,&quot;view_level&quot;:&quot;5.11&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:393,&quot;recommendation_id&quot;:4907350}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.5</td>
+            <td>
+                                    Implement and Manage a Firewall on End-User Devices
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.5 Implement and Manage a Firewall on End-User Devices (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596623,&quot;section_id&quot;:2841855,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Firewall Is Enabled&quot;,&quot;view_level&quot;:&quot;2.2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:395,&quot;recommendation_id&quot;:4596623}},{&quot;id&quot;:4596625,&quot;section_id&quot;:2841855,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Firewall Stealth Mode Is Enabled&quot;,&quot;view_level&quot;:&quot;2.2.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:395,&quot;recommendation_id&quot;:4596625}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.6</td>
+            <td>
+                                    Securely Manage Enterprise Assets and Software
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.6 Securely Manage Enterprise Assets and Software (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596690,&quot;section_id&quot;:2841869,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Lockdown Mode&quot;,&quot;view_level&quot;:&quot;2.6.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:396,&quot;recommendation_id&quot;:4596690}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.7</td>
+            <td>
+                                    Manage Default Accounts on Enterprise Assets and Software
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.7 Manage Default Accounts on Enterprise Assets and Software (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596715,&quot;section_id&quot;:2841881,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Require Password After Screen Saver Begins or Display Is Turned Off Is Enabled for 5 Seconds or Immediately&quot;,&quot;view_level&quot;:&quot;2.10.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:397,&quot;recommendation_id&quot;:4596715}},{&quot;id&quot;:4596727,&quot;section_id&quot;:2841884,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Automatic Login Is Disabled&quot;,&quot;view_level&quot;:&quot;2.12.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:397,&quot;recommendation_id&quot;:4596727}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.8</td>
+            <td>
+                                    Uninstall or Disable Unnecessary Services on Enterprise Assets and Software
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596616,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit iCloud Keychain&quot;,&quot;view_level&quot;:&quot;2.1.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596616}},{&quot;id&quot;:4596617,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit iCloud Drive&quot;,&quot;view_level&quot;:&quot;2.1.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596617}},{&quot;id&quot;:4596618,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure iCloud Drive Document and Desktop Sync Is Disabled&quot;,&quot;view_level&quot;:&quot;2.1.1.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596618}},{&quot;id&quot;:4596620,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Freeform Sync to iCloud&quot;,&quot;view_level&quot;:&quot;2.1.1.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596620}},{&quot;id&quot;:4596621,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Find My Mac&quot;,&quot;view_level&quot;:&quot;2.1.1.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596621}},{&quot;id&quot;:4596622,&quot;section_id&quot;:2841853,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit App Store Password Settings&quot;,&quot;view_level&quot;:&quot;2.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596622}},{&quot;id&quot;:4596625,&quot;section_id&quot;:2841855,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Firewall Stealth Mode Is Enabled&quot;,&quot;view_level&quot;:&quot;2.2.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596625}},{&quot;id&quot;:4596626,&quot;section_id&quot;:2841858,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure AirDrop Is Disabled When Not Actively Transferring Files&quot;,&quot;view_level&quot;:&quot;2.3.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596626}},{&quot;id&quot;:4596628,&quot;section_id&quot;:2841858,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure AirPlay Receiver Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596628}},{&quot;id&quot;:4596635,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure DVD or CD Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596635}},{&quot;id&quot;:4596637,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Screen Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596637}},{&quot;id&quot;:4596639,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure File Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596639}},{&quot;id&quot;:4596641,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Printer Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596641}},{&quot;id&quot;:4596643,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Remote Login Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596643}},{&quot;id&quot;:4596645,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Remote Management Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596645}},{&quot;id&quot;:4596647,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Remote Apple Events Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596647}},{&quot;id&quot;:4596649,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Internet Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596649}},{&quot;id&quot;:4596651,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Content Caching Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.9&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596651}},{&quot;id&quot;:4596653,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Media Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596653}},{&quot;id&quot;:4596664,&quot;section_id&quot;:2841866,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Show Wi-Fi status in Menu Bar Is Enabled&quot;,&quot;view_level&quot;:&quot;2.4.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596664}},{&quot;id&quot;:4596667,&quot;section_id&quot;:2841866,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Show Bluetooth Status in Menu Bar Is Enabled&quot;,&quot;view_level&quot;:&quot;2.4.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596667}},{&quot;id&quot;:4596669,&quot;section_id&quot;:2841867,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Siri Settings&quot;,&quot;view_level&quot;:&quot;2.5.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596669}},{&quot;id&quot;:4596671,&quot;section_id&quot;:2841867,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Listen for (Siri) Is Disabled&quot;,&quot;view_level&quot;:&quot;2.5.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596671}},{&quot;id&quot;:4596673,&quot;section_id&quot;:2841870,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Location Services Is Enabled&quot;,&quot;view_level&quot;:&quot;2.6.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596673}},{&quot;id&quot;:4596676,&quot;section_id&quot;:2841870,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure &#039;Show Location Icon in Control Center when System Services Request Your Location&#039; Is Enabled&quot;,&quot;view_level&quot;:&quot;2.6.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596676}},{&quot;id&quot;:4730709,&quot;section_id&quot;:2925527,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Share Mac Analytics Is Disabled&quot;,&quot;view_level&quot;:&quot;2.6.3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4730709}},{&quot;id&quot;:4731246,&quot;section_id&quot;:2925527,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Improve Siri &amp; Dictation Is Disabled&quot;,&quot;view_level&quot;:&quot;2.6.3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4731246}},{&quot;id&quot;:4731783,&quot;section_id&quot;:2925527,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Improve Assistive Voice Features Is Disabled&quot;,&quot;view_level&quot;:&quot;2.6.3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4731783}},{&quot;id&quot;:4738988,&quot;section_id&quot;:2925527,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure &#039;Share with app developers&#039; Is Disabled&quot;,&quot;view_level&quot;:&quot;2.6.3.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4738988}},{&quot;id&quot;:4739244,&quot;section_id&quot;:2925527,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Share iCloud Analytics Is Disabled&quot;,&quot;view_level&quot;:&quot;2.6.3.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4739244}},{&quot;id&quot;:4596683,&quot;section_id&quot;:2841869,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Limit Ad Tracking Is Enabled&quot;,&quot;view_level&quot;:&quot;2.6.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596683}},{&quot;id&quot;:4596697,&quot;section_id&quot;:2841877,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Universal Control Settings&quot;,&quot;view_level&quot;:&quot;2.8.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596697}},{&quot;id&quot;:4596705,&quot;section_id&quot;:2841879,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Power Nap Is Disabled for Intel Macs&quot;,&quot;view_level&quot;:&quot;2.9.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596705}},{&quot;id&quot;:4596708,&quot;section_id&quot;:2841879,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Wake for Network Access Is Disabled&quot;,&quot;view_level&quot;:&quot;2.9.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596708}},{&quot;id&quot;:4596732,&quot;section_id&quot;:2841889,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Internet Accounts for Authorized Use&quot;,&quot;view_level&quot;:&quot;2.17.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596732}},{&quot;id&quot;:4596654,&quot;section_id&quot;:2841862,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Bonjour Advertising Services Is Disabled&quot;,&quot;view_level&quot;:&quot;4.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596654}},{&quot;id&quot;:4596656,&quot;section_id&quot;:2841862,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure HTTP Server Is Disabled&quot;,&quot;view_level&quot;:&quot;4.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596656}},{&quot;id&quot;:4596658,&quot;section_id&quot;:2841862,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure NFS Server Is Disabled&quot;,&quot;view_level&quot;:&quot;4.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596658}},{&quot;id&quot;:4596721,&quot;section_id&quot;:2841882,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Secure Keyboard Entry Terminal.app Is Enabled&quot;,&quot;view_level&quot;:&quot;6.4.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:398,&quot;recommendation_id&quot;:4596721}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>5.2</td>
+            <td>
+                                    Use Unique Passwords
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 5.2 Use Unique Passwords (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596619,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Security Keys Used With Apple Accounts&quot;,&quot;view_level&quot;:&quot;2.1.1.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:404,&quot;recommendation_id&quot;:4596619}},{&quot;id&quot;:4596723,&quot;section_id&quot;:2841883,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Users&#039; Accounts Do Not Have a Password Hint&quot;,&quot;view_level&quot;:&quot;2.11.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:404,&quot;recommendation_id&quot;:4596723}},{&quot;id&quot;:4596724,&quot;section_id&quot;:2841883,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Touch ID&quot;,&quot;view_level&quot;:&quot;2.11.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:404,&quot;recommendation_id&quot;:4596724}},{&quot;id&quot;:4596725,&quot;section_id&quot;:2841884,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Guest Account Is Disabled&quot;,&quot;view_level&quot;:&quot;2.12.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:404,&quot;recommendation_id&quot;:4596725}},{&quot;id&quot;:4596728,&quot;section_id&quot;:2841885,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Passwords System Preference Setting&quot;,&quot;view_level&quot;:&quot;2.13.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:404,&quot;recommendation_id&quot;:4596728}},{&quot;id&quot;:4596674,&quot;section_id&quot;:2841868,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Password Minimum Length Is Configured&quot;,&quot;view_level&quot;:&quot;5.2.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:404,&quot;recommendation_id&quot;:4596674}},{&quot;id&quot;:4596675,&quot;section_id&quot;:2841868,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Complex Password Must Contain Alphabetic Characters Is Configured&quot;,&quot;view_level&quot;:&quot;5.2.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:404,&quot;recommendation_id&quot;:4596675}},{&quot;id&quot;:4596677,&quot;section_id&quot;:2841868,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Complex Password Must Contain Numeric Character Is Configured&quot;,&quot;view_level&quot;:&quot;5.2.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:404,&quot;recommendation_id&quot;:4596677}},{&quot;id&quot;:4596680,&quot;section_id&quot;:2841868,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Complex Password Must Contain Special Character Is Configured&quot;,&quot;view_level&quot;:&quot;5.2.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:404,&quot;recommendation_id&quot;:4596680}},{&quot;id&quot;:4596682,&quot;section_id&quot;:2841868,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Complex Password Must Contain Uppercase and Lowercase Characters Is Configured&quot;,&quot;view_level&quot;:&quot;5.2.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:404,&quot;recommendation_id&quot;:4596682}},{&quot;id&quot;:4596686,&quot;section_id&quot;:2841868,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Password History Is Configured&quot;,&quot;view_level&quot;:&quot;5.2.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:404,&quot;recommendation_id&quot;:4596686}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>5.3</td>
+            <td>
+                                    Disable Dormant Accounts
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 5.3 Disable Dormant Accounts (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596684,&quot;section_id&quot;:2841868,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Password Age Is Configured&quot;,&quot;view_level&quot;:&quot;5.2.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:405,&quot;recommendation_id&quot;:4596684}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>5.4</td>
+            <td>
+                                    Restrict Administrator Privileges to Dedicated Administrator Accounts
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 5.4 Restrict Administrator Privileges to Dedicated Administrator Accounts (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596639,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure File Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:406,&quot;recommendation_id&quot;:4596639}},{&quot;id&quot;:4596645,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Remote Management Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:406,&quot;recommendation_id&quot;:4596645}},{&quot;id&quot;:4596699,&quot;section_id&quot;:2841864,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure the \&quot;root\&quot; Account Is Disabled&quot;,&quot;view_level&quot;:&quot;5.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:406,&quot;recommendation_id&quot;:4596699}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>5.6</td>
+            <td>
+                                    Centralize Account Management
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 5.6 Centralize Account Management (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596728,&quot;section_id&quot;:2841885,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Passwords System Preference Setting&quot;,&quot;view_level&quot;:&quot;2.13.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:408,&quot;recommendation_id&quot;:4596728}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>6.2</td>
+            <td>
+                                    Establish an Access Revoking Process
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 6.2 Establish an Access Revoking Process (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596725,&quot;section_id&quot;:2841884,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Guest Account Is Disabled&quot;,&quot;view_level&quot;:&quot;2.12.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:411,&quot;recommendation_id&quot;:4596725}},{&quot;id&quot;:4596672,&quot;section_id&quot;:2841868,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Password Account Lockout Threshold Is Configured&quot;,&quot;view_level&quot;:&quot;5.2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:411,&quot;recommendation_id&quot;:4596672}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>6.7</td>
+            <td>
+                                    Centralize Access Control
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 6.7 Centralize Access Control (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596626,&quot;section_id&quot;:2841858,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure AirDrop Is Disabled When Not Actively Transferring Files&quot;,&quot;view_level&quot;:&quot;2.3.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:416,&quot;recommendation_id&quot;:4596626}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>6.8</td>
+            <td>
+                                    Define and Maintain Role-Based Access Control
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 6.8 Define and Maintain Role-Based Access Control (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596725,&quot;section_id&quot;:2841884,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Guest Account Is Disabled&quot;,&quot;view_level&quot;:&quot;2.12.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:417,&quot;recommendation_id&quot;:4596725}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>7.3</td>
+            <td>
+                                    Perform Automated Operating System Patch Management
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 7.3 Perform Automated Operating System Patch Management (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596624,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure All Apple-provided Software Is Current&quot;,&quot;view_level&quot;:&quot;1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:421,&quot;recommendation_id&quot;:4596624}},{&quot;id&quot;:4596627,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Auto Update Is Enabled&quot;,&quot;view_level&quot;:&quot;1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:421,&quot;recommendation_id&quot;:4596627}},{&quot;id&quot;:4596629,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Download New Updates When Available Is Enabled&quot;,&quot;view_level&quot;:&quot;1.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:421,&quot;recommendation_id&quot;:4596629}},{&quot;id&quot;:4596630,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Install of macOS Updates Is Enabled&quot;,&quot;view_level&quot;:&quot;1.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:421,&quot;recommendation_id&quot;:4596630}},{&quot;id&quot;:4596632,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Install Application Updates from the App Store Is Enabled&quot;,&quot;view_level&quot;:&quot;1.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:421,&quot;recommendation_id&quot;:4596632}},{&quot;id&quot;:4596634,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Install Security Responses and System Files Is Enabled&quot;,&quot;view_level&quot;:&quot;1.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:421,&quot;recommendation_id&quot;:4596634}},{&quot;id&quot;:4596636,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Software Update Deferment Is Less Than or Equal to 30 Days&quot;,&quot;view_level&quot;:&quot;1.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:421,&quot;recommendation_id&quot;:4596636}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>7.4</td>
+            <td>
+                                    Perform Automated Application Patch Management
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 7.4 Perform Automated Application Patch Management (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596624,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure All Apple-provided Software Is Current&quot;,&quot;view_level&quot;:&quot;1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:422,&quot;recommendation_id&quot;:4596624}},{&quot;id&quot;:4596627,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Auto Update Is Enabled&quot;,&quot;view_level&quot;:&quot;1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:422,&quot;recommendation_id&quot;:4596627}},{&quot;id&quot;:4596629,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Download New Updates When Available Is Enabled&quot;,&quot;view_level&quot;:&quot;1.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:422,&quot;recommendation_id&quot;:4596629}},{&quot;id&quot;:4596630,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Install of macOS Updates Is Enabled&quot;,&quot;view_level&quot;:&quot;1.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:422,&quot;recommendation_id&quot;:4596630}},{&quot;id&quot;:4596632,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Install Application Updates from the App Store Is Enabled&quot;,&quot;view_level&quot;:&quot;1.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:422,&quot;recommendation_id&quot;:4596632}},{&quot;id&quot;:4596634,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Install Security Responses and System Files Is Enabled&quot;,&quot;view_level&quot;:&quot;1.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:422,&quot;recommendation_id&quot;:4596634}},{&quot;id&quot;:4596636,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Software Update Deferment Is Less Than or Equal to 30 Days&quot;,&quot;view_level&quot;:&quot;1.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:422,&quot;recommendation_id&quot;:4596636}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>7.7</td>
+            <td>
+                                    Remediate Detected Vulnerabilities
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 7.7 Remediate Detected Vulnerabilities (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596634,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Install Security Responses and System Files Is Enabled&quot;,&quot;view_level&quot;:&quot;1.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:425,&quot;recommendation_id&quot;:4596634}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>8.1</td>
+            <td>
+                                    Establish and Maintain an Audit Log Management Process
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 8.1 Establish and Maintain an Audit Log Management Process (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596644,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure install.log Is Retained for 365 or More Days and No Maximum Size&quot;,&quot;view_level&quot;:&quot;3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:427,&quot;recommendation_id&quot;:4596644}},{&quot;id&quot;:4596646,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Security Auditing Retention Is Enabled&quot;,&quot;view_level&quot;:&quot;3.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:427,&quot;recommendation_id&quot;:4596646}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>8.2</td>
+            <td>
+                                    Collect Audit Logs
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 8.2 Collect Audit Logs (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596640,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Security Auditing Is Enabled&quot;,&quot;view_level&quot;:&quot;3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:428,&quot;recommendation_id&quot;:4596640}},{&quot;id&quot;:4596642,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Security Auditing Flags For User-Attributable Events Are Configured Per Local Organizational Requirements&quot;,&quot;view_level&quot;:&quot;3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:428,&quot;recommendation_id&quot;:4596642}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>8.3</td>
+            <td>
+                                    Ensure Adequate Audit Log Storage
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 8.3 Ensure Adequate Audit Log Storage (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596644,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure install.log Is Retained for 365 or More Days and No Maximum Size&quot;,&quot;view_level&quot;:&quot;3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:429,&quot;recommendation_id&quot;:4596644}},{&quot;id&quot;:4596646,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Security Auditing Retention Is Enabled&quot;,&quot;view_level&quot;:&quot;3.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:429,&quot;recommendation_id&quot;:4596646}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>8.4</td>
+            <td>
+                                    Standardize Time Synchronization
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 8.4 Standardize Time Synchronization (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596631,&quot;section_id&quot;:2841859,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Set Time and Date Automatically Is Enabled&quot;,&quot;view_level&quot;:&quot;2.3.2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:430,&quot;recommendation_id&quot;:4596631}},{&quot;id&quot;:4596633,&quot;section_id&quot;:2841859,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure the Time Service Is Enabled&quot;,&quot;view_level&quot;:&quot;2.3.2.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:430,&quot;recommendation_id&quot;:4596633}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>8.5</td>
+            <td>
+                                    Collect Detailed Audit Logs
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 8.5 Collect Detailed Audit Logs (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596640,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Security Auditing Is Enabled&quot;,&quot;view_level&quot;:&quot;3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:431,&quot;recommendation_id&quot;:4596640}},{&quot;id&quot;:4596642,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Security Auditing Flags For User-Attributable Events Are Configured Per Local Organizational Requirements&quot;,&quot;view_level&quot;:&quot;3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:431,&quot;recommendation_id&quot;:4596642}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>9.1</td>
+            <td>
+                                    Ensure Use of Only Fully Supported Browsers and Email Clients
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 9.1 Ensure Use of Only Fully Supported Browsers and Email Clients (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596696,&quot;section_id&quot;:2841876,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Protect Mail Activity in Mail Is Enabled&quot;,&quot;view_level&quot;:&quot;6.2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:439,&quot;recommendation_id&quot;:4596696}},{&quot;id&quot;:4596698,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Automatic Opening of Safe Files in Safari Is Disabled&quot;,&quot;view_level&quot;:&quot;6.3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:439,&quot;recommendation_id&quot;:4596698}},{&quot;id&quot;:4596703,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit History and Remove History Items&quot;,&quot;view_level&quot;:&quot;6.3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:439,&quot;recommendation_id&quot;:4596703}},{&quot;id&quot;:4596704,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Warn When Visiting A Fraudulent Website in Safari Is Enabled&quot;,&quot;view_level&quot;:&quot;6.3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:439,&quot;recommendation_id&quot;:4596704}},{&quot;id&quot;:4596707,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Prevent Cross-site Tracking in Safari Is Enabled&quot;,&quot;view_level&quot;:&quot;6.3.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:439,&quot;recommendation_id&quot;:4596707}},{&quot;id&quot;:4596710,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Hide IP Address in Safari Setting&quot;,&quot;view_level&quot;:&quot;6.3.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:439,&quot;recommendation_id&quot;:4596710}},{&quot;id&quot;:4596711,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Advertising Privacy Protection in Safari Is Enabled&quot;,&quot;view_level&quot;:&quot;6.3.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:439,&quot;recommendation_id&quot;:4596711}},{&quot;id&quot;:4596714,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Show Full Website Address in Safari Is Enabled&quot;,&quot;view_level&quot;:&quot;6.3.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:439,&quot;recommendation_id&quot;:4596714}},{&quot;id&quot;:4596716,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit AutoFill&quot;,&quot;view_level&quot;:&quot;6.3.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:439,&quot;recommendation_id&quot;:4596716}},{&quot;id&quot;:4596718,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Pop-up Windows&quot;,&quot;view_level&quot;:&quot;6.3.9&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:439,&quot;recommendation_id&quot;:4596718}},{&quot;id&quot;:4596719,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Show Status Bar Is Enabled&quot;,&quot;view_level&quot;:&quot;6.3.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:439,&quot;recommendation_id&quot;:4596719}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>9.3</td>
+            <td>
+                                    Maintain and Enforce Network-Based URL Filters
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 9.3 Maintain and Enforce Network-Based URL Filters (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596696,&quot;section_id&quot;:2841876,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Protect Mail Activity in Mail Is Enabled&quot;,&quot;view_level&quot;:&quot;6.2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:441,&quot;recommendation_id&quot;:4596696}},{&quot;id&quot;:4596704,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Warn When Visiting A Fraudulent Website in Safari Is Enabled&quot;,&quot;view_level&quot;:&quot;6.3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:441,&quot;recommendation_id&quot;:4596704}},{&quot;id&quot;:4596710,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Hide IP Address in Safari Setting&quot;,&quot;view_level&quot;:&quot;6.3.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:441,&quot;recommendation_id&quot;:4596710}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>9.6</td>
+            <td>
+                                    Block Unnecessary File Types
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 9.6 Block Unnecessary File Types (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596698,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Automatic Opening of Safe Files in Safari Is Disabled&quot;,&quot;view_level&quot;:&quot;6.3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:444,&quot;recommendation_id&quot;:4596698}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>10.1</td>
+            <td>
+                                    Deploy and Maintain Anti-Malware Software
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 10.1 Deploy and Maintain Anti-Malware Software (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596685,&quot;section_id&quot;:2841869,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Gatekeeper Is Enabled&quot;,&quot;view_level&quot;:&quot;2.6.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:447,&quot;recommendation_id&quot;:4596685}},{&quot;id&quot;:4596712,&quot;section_id&quot;:2841864,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure XProtect Is Running and Updated&quot;,&quot;view_level&quot;:&quot;5.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:447,&quot;recommendation_id&quot;:4596712}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>10.2</td>
+            <td>
+                                    Configure Automatic Anti-Malware Signature Updates
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 10.2 Configure Automatic Anti-Malware Signature Updates (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596685,&quot;section_id&quot;:2841869,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Gatekeeper Is Enabled&quot;,&quot;view_level&quot;:&quot;2.6.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:448,&quot;recommendation_id&quot;:4596685}},{&quot;id&quot;:4596712,&quot;section_id&quot;:2841864,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure XProtect Is Running and Updated&quot;,&quot;view_level&quot;:&quot;5.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:448,&quot;recommendation_id&quot;:4596712}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>10.5</td>
+            <td>
+                                    Enable Anti-Exploitation Features
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 10.5 Enable Anti-Exploitation Features (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596685,&quot;section_id&quot;:2841869,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Gatekeeper Is Enabled&quot;,&quot;view_level&quot;:&quot;2.6.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:451,&quot;recommendation_id&quot;:4596685}},{&quot;id&quot;:4596662,&quot;section_id&quot;:2841865,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure System Integrity Protection Status (SIP) Is Enabled&quot;,&quot;view_level&quot;:&quot;5.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:451,&quot;recommendation_id&quot;:4596662}},{&quot;id&quot;:4596712,&quot;section_id&quot;:2841864,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure XProtect Is Running and Updated&quot;,&quot;view_level&quot;:&quot;5.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:451,&quot;recommendation_id&quot;:4596712}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>11.2</td>
+            <td>
+                                    Perform Automated Backups 
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 11.2 Perform Automated Backups  (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596659,&quot;section_id&quot;:2841863,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Backup Automatically is Enabled If Time Machine Is Enabled&quot;,&quot;view_level&quot;:&quot;2.3.4.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:456,&quot;recommendation_id&quot;:4596659}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>11.3</td>
+            <td>
+                                    Protect Recovery Data
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 11.3 Protect Recovery Data (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596661,&quot;section_id&quot;:2841863,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Time Machine Volumes Are Encrypted If Time Machine Is Enabled&quot;,&quot;view_level&quot;:&quot;2.3.4.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:457,&quot;recommendation_id&quot;:4596661}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>12.6</td>
+            <td>
+                                    Use of Secure Network Management and Communication Protocols 
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 12.6 Use of Secure Network Management and Communication Protocols  (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596664,&quot;section_id&quot;:2841866,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Show Wi-Fi status in Menu Bar Is Enabled&quot;,&quot;view_level&quot;:&quot;2.4.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:466,&quot;recommendation_id&quot;:4596664}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>13.1</td>
+            <td>
+                                    Centralize Security Event Alerting
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 13.1 Centralize Security Event Alerting (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596623,&quot;section_id&quot;:2841855,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Firewall Is Enabled&quot;,&quot;view_level&quot;:&quot;2.2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:470,&quot;recommendation_id&quot;:4596623}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>13.9</td>
+            <td>
+                                    Deploy Port-Level Access Control
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 13.9 Deploy Port-Level Access Control (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596667,&quot;section_id&quot;:2841866,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Show Bluetooth Status in Menu Bar Is Enabled&quot;,&quot;view_level&quot;:&quot;2.4.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:478,&quot;recommendation_id&quot;:4596667}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>15.3</td>
+            <td>
+                                    Classify Service Providers
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 15.3 Classify Service Providers (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596616,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit iCloud Keychain&quot;,&quot;view_level&quot;:&quot;2.1.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:493,&quot;recommendation_id&quot;:4596616}},{&quot;id&quot;:4596617,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit iCloud Drive&quot;,&quot;view_level&quot;:&quot;2.1.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:493,&quot;recommendation_id&quot;:4596617}},{&quot;id&quot;:4596618,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure iCloud Drive Document and Desktop Sync Is Disabled&quot;,&quot;view_level&quot;:&quot;2.1.1.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:493,&quot;recommendation_id&quot;:4596618}},{&quot;id&quot;:4596620,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Freeform Sync to iCloud&quot;,&quot;view_level&quot;:&quot;2.1.1.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:493,&quot;recommendation_id&quot;:4596620}},{&quot;id&quot;:4596621,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Find My Mac&quot;,&quot;view_level&quot;:&quot;2.1.1.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:493,&quot;recommendation_id&quot;:4596621}},{&quot;id&quot;:4596732,&quot;section_id&quot;:2841889,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Internet Accounts for Authorized Use&quot;,&quot;view_level&quot;:&quot;2.17.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:493,&quot;recommendation_id&quot;:4596732}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>16.7</td>
+            <td>
+                                    Use Standard Hardening Configuration Templates for Application Infrastructure
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 16.7 Use Standard Hardening Configuration Templates for Application Infrastructure (Version 8)"
+                        recommendations="[{&quot;id&quot;:4596679,&quot;section_id&quot;:2841871,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Full Disk Access for Applications&quot;,&quot;view_level&quot;:&quot;2.6.2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:505,&quot;recommendation_id&quot;:4596679}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+        </tbody>
+</table>
+                </div>
+                            <div id="version_7"
+                     class="version-tabs hidden">
+                    <div class="flex justify-between items-baseline">
+    <div>
+        <h3>CIS Controls Version 7</h3>
+    </div>
+    <div class="pr-7">
+            </div>
+
+</div>
+<table class="table table-striped table-hover ">
+    <thead>
+    <tr>
+        <th>Control</th>
+        <th>Title</th>
+        <th class="text-center">IG 1</th>
+        <th class="text-center">IG 2</th>
+        <th class="text-center">IG 3</th>
+        <th class="text-center">Linked Recommendations</th>
+    </tr>
+    </thead>
+    <tbody>
+            <tr>
+            <td>0.0</td>
+            <td>
+                                    Explicitly Not Mapped
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 0.0 Explicitly Not Mapped (Version 7)"
+                        recommendations="[{&quot;id&quot;:4666880,&quot;section_id&quot;:2841875,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit iPhone Mirroring&quot;,&quot;view_level&quot;:&quot;2.7.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:533,&quot;recommendation_id&quot;:4666880}},{&quot;id&quot;:4596729,&quot;section_id&quot;:2841886,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Game Center Settings&quot;,&quot;view_level&quot;:&quot;2.14.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:533,&quot;recommendation_id&quot;:4596729}},{&quot;id&quot;:4596731,&quot;section_id&quot;:2841888,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Wallet &amp; Apple Pay Settings&quot;,&quot;view_level&quot;:&quot;2.16.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:533,&quot;recommendation_id&quot;:4596731}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>2.1</td>
+            <td>
+                                    Maintain Inventory of Authorized Software
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 2.1 Maintain Inventory of Authorized Software (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596652,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Software Inventory&quot;,&quot;view_level&quot;:&quot;3.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:181,&quot;recommendation_id&quot;:4596652}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>2.6</td>
+            <td>
+                                    Address unapproved software
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 2.6 Address unapproved software (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596678,&quot;section_id&quot;:2841870,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Location Services Access&quot;,&quot;view_level&quot;:&quot;2.6.1.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:186,&quot;recommendation_id&quot;:4596678}},{&quot;id&quot;:4596662,&quot;section_id&quot;:2841865,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure System Integrity Protection Status (SIP) Is Enabled&quot;,&quot;view_level&quot;:&quot;5.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:186,&quot;recommendation_id&quot;:4596662}},{&quot;id&quot;:4596663,&quot;section_id&quot;:2841865,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Apple Mobile File Integrity (AMFI) Is Enabled&quot;,&quot;view_level&quot;:&quot;5.1.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:186,&quot;recommendation_id&quot;:4596663}},{&quot;id&quot;:4596688,&quot;section_id&quot;:2841873,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Show All Filename Extensions Setting is Enabled&quot;,&quot;view_level&quot;:&quot;6.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:186,&quot;recommendation_id&quot;:4596688}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>3.4</td>
+            <td>
+                                    Deploy Automated Operating System Patch Management Tools
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 3.4 Deploy Automated Operating System Patch Management Tools (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596624,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure All Apple-provided Software Is Current&quot;,&quot;view_level&quot;:&quot;1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:195,&quot;recommendation_id&quot;:4596624}},{&quot;id&quot;:4596627,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Auto Update Is Enabled&quot;,&quot;view_level&quot;:&quot;1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:195,&quot;recommendation_id&quot;:4596627}},{&quot;id&quot;:4596629,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Download New Updates When Available Is Enabled&quot;,&quot;view_level&quot;:&quot;1.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:195,&quot;recommendation_id&quot;:4596629}},{&quot;id&quot;:4596630,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Install of macOS Updates Is Enabled&quot;,&quot;view_level&quot;:&quot;1.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:195,&quot;recommendation_id&quot;:4596630}},{&quot;id&quot;:4596632,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Install Application Updates from the App Store Is Enabled&quot;,&quot;view_level&quot;:&quot;1.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:195,&quot;recommendation_id&quot;:4596632}},{&quot;id&quot;:4596634,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Install Security Responses and System Files Is Enabled&quot;,&quot;view_level&quot;:&quot;1.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:195,&quot;recommendation_id&quot;:4596634}},{&quot;id&quot;:4596636,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Software Update Deferment Is Less Than or Equal to 30 Days&quot;,&quot;view_level&quot;:&quot;1.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:195,&quot;recommendation_id&quot;:4596636}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>3.5</td>
+            <td>
+                                    Deploy Automated Software Patch Management Tools
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 3.5 Deploy Automated Software Patch Management Tools (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596624,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure All Apple-provided Software Is Current&quot;,&quot;view_level&quot;:&quot;1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:196,&quot;recommendation_id&quot;:4596624}},{&quot;id&quot;:4596627,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Auto Update Is Enabled&quot;,&quot;view_level&quot;:&quot;1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:196,&quot;recommendation_id&quot;:4596627}},{&quot;id&quot;:4596629,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Download New Updates When Available Is Enabled&quot;,&quot;view_level&quot;:&quot;1.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:196,&quot;recommendation_id&quot;:4596629}},{&quot;id&quot;:4596630,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Install of macOS Updates Is Enabled&quot;,&quot;view_level&quot;:&quot;1.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:196,&quot;recommendation_id&quot;:4596630}},{&quot;id&quot;:4596632,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Install Application Updates from the App Store Is Enabled&quot;,&quot;view_level&quot;:&quot;1.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:196,&quot;recommendation_id&quot;:4596632}},{&quot;id&quot;:4596634,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Install Security Responses and System Files Is Enabled&quot;,&quot;view_level&quot;:&quot;1.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:196,&quot;recommendation_id&quot;:4596634}},{&quot;id&quot;:4596636,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Software Update Deferment Is Less Than or Equal to 30 Days&quot;,&quot;view_level&quot;:&quot;1.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:196,&quot;recommendation_id&quot;:4596636}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.1</td>
+            <td>
+                                    Maintain Inventory of Administrative Accounts
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.1 Maintain Inventory of Administrative Accounts (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596721,&quot;section_id&quot;:2841882,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Secure Keyboard Entry Terminal.app Is Enabled&quot;,&quot;view_level&quot;:&quot;6.4.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:200,&quot;recommendation_id&quot;:4596721}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.2</td>
+            <td>
+                                    Change Default Passwords
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.2 Change Default Passwords (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596715,&quot;section_id&quot;:2841881,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Require Password After Screen Saver Begins or Display Is Turned Off Is Enabled for 5 Seconds or Immediately&quot;,&quot;view_level&quot;:&quot;2.10.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:201,&quot;recommendation_id&quot;:4596715}},{&quot;id&quot;:4596727,&quot;section_id&quot;:2841884,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Automatic Login Is Disabled&quot;,&quot;view_level&quot;:&quot;2.12.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:201,&quot;recommendation_id&quot;:4596727}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.3</td>
+            <td>
+                                    Ensure the Use of Dedicated Administrative Accounts
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.3 Ensure the Use of Dedicated Administrative Accounts (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596639,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure File Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:202,&quot;recommendation_id&quot;:4596639}},{&quot;id&quot;:4596645,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Remote Management Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:202,&quot;recommendation_id&quot;:4596645}},{&quot;id&quot;:4596699,&quot;section_id&quot;:2841864,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure the \&quot;root\&quot; Account Is Disabled&quot;,&quot;view_level&quot;:&quot;5.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:202,&quot;recommendation_id&quot;:4596699}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.4</td>
+            <td>
+                                    Use Unique Passwords
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.4 Use Unique Passwords (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596619,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Security Keys Used With Apple Accounts&quot;,&quot;view_level&quot;:&quot;2.1.1.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:203,&quot;recommendation_id&quot;:4596619}},{&quot;id&quot;:4596723,&quot;section_id&quot;:2841883,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Users&#039; Accounts Do Not Have a Password Hint&quot;,&quot;view_level&quot;:&quot;2.11.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:203,&quot;recommendation_id&quot;:4596723}},{&quot;id&quot;:4596724,&quot;section_id&quot;:2841883,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Touch ID&quot;,&quot;view_level&quot;:&quot;2.11.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:203,&quot;recommendation_id&quot;:4596724}},{&quot;id&quot;:4596725,&quot;section_id&quot;:2841884,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Guest Account Is Disabled&quot;,&quot;view_level&quot;:&quot;2.12.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:203,&quot;recommendation_id&quot;:4596725}},{&quot;id&quot;:4596728,&quot;section_id&quot;:2841885,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Passwords System Preference Setting&quot;,&quot;view_level&quot;:&quot;2.13.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:203,&quot;recommendation_id&quot;:4596728}},{&quot;id&quot;:4596674,&quot;section_id&quot;:2841868,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Password Minimum Length Is Configured&quot;,&quot;view_level&quot;:&quot;5.2.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:203,&quot;recommendation_id&quot;:4596674}},{&quot;id&quot;:4596675,&quot;section_id&quot;:2841868,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Complex Password Must Contain Alphabetic Characters Is Configured&quot;,&quot;view_level&quot;:&quot;5.2.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:203,&quot;recommendation_id&quot;:4596675}},{&quot;id&quot;:4596677,&quot;section_id&quot;:2841868,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Complex Password Must Contain Numeric Character Is Configured&quot;,&quot;view_level&quot;:&quot;5.2.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:203,&quot;recommendation_id&quot;:4596677}},{&quot;id&quot;:4596680,&quot;section_id&quot;:2841868,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Complex Password Must Contain Special Character Is Configured&quot;,&quot;view_level&quot;:&quot;5.2.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:203,&quot;recommendation_id&quot;:4596680}},{&quot;id&quot;:4596682,&quot;section_id&quot;:2841868,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Complex Password Must Contain Uppercase and Lowercase Characters Is Configured&quot;,&quot;view_level&quot;:&quot;5.2.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:203,&quot;recommendation_id&quot;:4596682}},{&quot;id&quot;:4596686,&quot;section_id&quot;:2841868,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Password History Is Configured&quot;,&quot;view_level&quot;:&quot;5.2.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:203,&quot;recommendation_id&quot;:4596686}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.8</td>
+            <td>
+                                    Log and Alert on Changes to Administrative Group Membership
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.8 Log and Alert on Changes to Administrative Group Membership (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596655,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Bluetooth Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.11&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:207,&quot;recommendation_id&quot;:4596655}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>4.9</td>
+            <td>
+                                    Log and Alert on Unsuccessful Administrative Account Login
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 4.9 Log and Alert on Unsuccessful Administrative Account Login (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596640,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Security Auditing Is Enabled&quot;,&quot;view_level&quot;:&quot;3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:208,&quot;recommendation_id&quot;:4596640}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>5.1</td>
+            <td>
+                                    Establish Secure Configurations
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 5.1 Establish Secure Configurations (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596638,&quot;section_id&quot;:2841856,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure the System is Managed by a Mobile Device Management (MDM) Software&quot;,&quot;view_level&quot;:&quot;1.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596638}},{&quot;id&quot;:4596616,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit iCloud Keychain&quot;,&quot;view_level&quot;:&quot;2.1.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596616}},{&quot;id&quot;:4596617,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit iCloud Drive&quot;,&quot;view_level&quot;:&quot;2.1.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596617}},{&quot;id&quot;:4596618,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure iCloud Drive Document and Desktop Sync Is Disabled&quot;,&quot;view_level&quot;:&quot;2.1.1.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596618}},{&quot;id&quot;:4596620,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Freeform Sync to iCloud&quot;,&quot;view_level&quot;:&quot;2.1.1.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596620}},{&quot;id&quot;:4596621,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Find My Mac&quot;,&quot;view_level&quot;:&quot;2.1.1.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596621}},{&quot;id&quot;:4596622,&quot;section_id&quot;:2841853,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit App Store Password Settings&quot;,&quot;view_level&quot;:&quot;2.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596622}},{&quot;id&quot;:4596623,&quot;section_id&quot;:2841855,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Firewall Is Enabled&quot;,&quot;view_level&quot;:&quot;2.2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596623}},{&quot;id&quot;:4596625,&quot;section_id&quot;:2841855,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Firewall Stealth Mode Is Enabled&quot;,&quot;view_level&quot;:&quot;2.2.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596625}},{&quot;id&quot;:4596626,&quot;section_id&quot;:2841858,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure AirDrop Is Disabled When Not Actively Transferring Files&quot;,&quot;view_level&quot;:&quot;2.3.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596626}},{&quot;id&quot;:4596628,&quot;section_id&quot;:2841858,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure AirPlay Receiver Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596628}},{&quot;id&quot;:4596635,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure DVD or CD Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596635}},{&quot;id&quot;:4596637,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Screen Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596637}},{&quot;id&quot;:4596639,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure File Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596639}},{&quot;id&quot;:4596641,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Printer Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596641}},{&quot;id&quot;:4596643,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Remote Login Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596643}},{&quot;id&quot;:4596647,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Remote Apple Events Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596647}},{&quot;id&quot;:4596649,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Internet Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596649}},{&quot;id&quot;:4596653,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Media Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596653}},{&quot;id&quot;:4596655,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Bluetooth Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.11&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596655}},{&quot;id&quot;:4596669,&quot;section_id&quot;:2841867,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Siri Settings&quot;,&quot;view_level&quot;:&quot;2.5.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596669}},{&quot;id&quot;:4596671,&quot;section_id&quot;:2841867,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Listen for (Siri) Is Disabled&quot;,&quot;view_level&quot;:&quot;2.5.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596671}},{&quot;id&quot;:4596673,&quot;section_id&quot;:2841870,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Location Services Is Enabled&quot;,&quot;view_level&quot;:&quot;2.6.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596673}},{&quot;id&quot;:4596676,&quot;section_id&quot;:2841870,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure &#039;Show Location Icon in Control Center when System Services Request Your Location&#039; Is Enabled&quot;,&quot;view_level&quot;:&quot;2.6.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596676}},{&quot;id&quot;:4596678,&quot;section_id&quot;:2841870,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Location Services Access&quot;,&quot;view_level&quot;:&quot;2.6.1.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596678}},{&quot;id&quot;:4596679,&quot;section_id&quot;:2841871,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Full Disk Access for Applications&quot;,&quot;view_level&quot;:&quot;2.6.2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596679}},{&quot;id&quot;:4730709,&quot;section_id&quot;:2925527,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Share Mac Analytics Is Disabled&quot;,&quot;view_level&quot;:&quot;2.6.3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4730709}},{&quot;id&quot;:4731246,&quot;section_id&quot;:2925527,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Improve Siri &amp; Dictation Is Disabled&quot;,&quot;view_level&quot;:&quot;2.6.3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4731246}},{&quot;id&quot;:4731783,&quot;section_id&quot;:2925527,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Improve Assistive Voice Features Is Disabled&quot;,&quot;view_level&quot;:&quot;2.6.3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4731783}},{&quot;id&quot;:4738988,&quot;section_id&quot;:2925527,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure &#039;Share with app developers&#039; Is Disabled&quot;,&quot;view_level&quot;:&quot;2.6.3.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4738988}},{&quot;id&quot;:4739244,&quot;section_id&quot;:2925527,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Share iCloud Analytics Is Disabled&quot;,&quot;view_level&quot;:&quot;2.6.3.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4739244}},{&quot;id&quot;:4596692,&quot;section_id&quot;:2841869,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure an Administrator Password Is Required to Access System-Wide Preferences&quot;,&quot;view_level&quot;:&quot;2.6.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596692}},{&quot;id&quot;:4596697,&quot;section_id&quot;:2841877,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Universal Control Settings&quot;,&quot;view_level&quot;:&quot;2.8.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596697}},{&quot;id&quot;:4596705,&quot;section_id&quot;:2841879,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Power Nap Is Disabled for Intel Macs&quot;,&quot;view_level&quot;:&quot;2.9.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596705}},{&quot;id&quot;:4596717,&quot;section_id&quot;:2841881,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure a Custom Message for the Login Screen Is Enabled&quot;,&quot;view_level&quot;:&quot;2.10.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596717}},{&quot;id&quot;:4596720,&quot;section_id&quot;:2841881,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Login Window Displays as Name and Password Is Enabled&quot;,&quot;view_level&quot;:&quot;2.10.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596720}},{&quot;id&quot;:4596722,&quot;section_id&quot;:2841881,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Show Password Hints Is Disabled&quot;,&quot;view_level&quot;:&quot;2.10.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596722}},{&quot;id&quot;:4596724,&quot;section_id&quot;:2841883,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Touch ID&quot;,&quot;view_level&quot;:&quot;2.11.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596724}},{&quot;id&quot;:4596730,&quot;section_id&quot;:2841887,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Notification &amp; Focus Settings&quot;,&quot;view_level&quot;:&quot;2.15.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596730}},{&quot;id&quot;:4596732,&quot;section_id&quot;:2841889,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Internet Accounts for Authorized Use&quot;,&quot;view_level&quot;:&quot;2.17.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596732}},{&quot;id&quot;:4596733,&quot;section_id&quot;:2841890,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure On-Device Dictation Is Enabled&quot;,&quot;view_level&quot;:&quot;2.18.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596733}},{&quot;id&quot;:4596654,&quot;section_id&quot;:2841862,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Bonjour Advertising Services Is Disabled&quot;,&quot;view_level&quot;:&quot;4.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596654}},{&quot;id&quot;:4596656,&quot;section_id&quot;:2841862,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure HTTP Server Is Disabled&quot;,&quot;view_level&quot;:&quot;4.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596656}},{&quot;id&quot;:4596658,&quot;section_id&quot;:2841862,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure NFS Server Is Disabled&quot;,&quot;view_level&quot;:&quot;4.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596658}},{&quot;id&quot;:4596706,&quot;section_id&quot;:2841864,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure a Login Window Banner Exists&quot;,&quot;view_level&quot;:&quot;5.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596706}},{&quot;id&quot;:4596709,&quot;section_id&quot;:2841864,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure the Guest Home Folder Does Not Exist&quot;,&quot;view_level&quot;:&quot;5.9&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596709}},{&quot;id&quot;:4596721,&quot;section_id&quot;:2841882,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Secure Keyboard Entry Terminal.app Is Enabled&quot;,&quot;view_level&quot;:&quot;6.4.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:210,&quot;recommendation_id&quot;:4596721}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>6.1</td>
+            <td>
+                                    Utilize Three Synchronized Time Sources
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 6.1 Utilize Three Synchronized Time Sources (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596631,&quot;section_id&quot;:2841859,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Set Time and Date Automatically Is Enabled&quot;,&quot;view_level&quot;:&quot;2.3.2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:216,&quot;recommendation_id&quot;:4596631}},{&quot;id&quot;:4596633,&quot;section_id&quot;:2841859,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure the Time Service Is Enabled&quot;,&quot;view_level&quot;:&quot;2.3.2.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:216,&quot;recommendation_id&quot;:4596633}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>6.2</td>
+            <td>
+                                    Activate audit logging
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 6.2 Activate audit logging (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596640,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Security Auditing Is Enabled&quot;,&quot;view_level&quot;:&quot;3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:217,&quot;recommendation_id&quot;:4596640}},{&quot;id&quot;:4596642,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Security Auditing Flags For User-Attributable Events Are Configured Per Local Organizational Requirements&quot;,&quot;view_level&quot;:&quot;3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:217,&quot;recommendation_id&quot;:4596642}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>6.4</td>
+            <td>
+                                    Ensure adequate storage for logs
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 6.4 Ensure adequate storage for logs (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596644,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure install.log Is Retained for 365 or More Days and No Maximum Size&quot;,&quot;view_level&quot;:&quot;3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:219,&quot;recommendation_id&quot;:4596644}},{&quot;id&quot;:4596646,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Security Auditing Retention Is Enabled&quot;,&quot;view_level&quot;:&quot;3.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:219,&quot;recommendation_id&quot;:4596646}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>6.7</td>
+            <td>
+                                    Regularly Review Logs
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 6.7 Regularly Review Logs (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596644,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure install.log Is Retained for 365 or More Days and No Maximum Size&quot;,&quot;view_level&quot;:&quot;3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:222,&quot;recommendation_id&quot;:4596644}},{&quot;id&quot;:4596646,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Security Auditing Retention Is Enabled&quot;,&quot;view_level&quot;:&quot;3.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:222,&quot;recommendation_id&quot;:4596646}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>7.1</td>
+            <td>
+                                    Ensure Use of Only Fully Supported Browsers and Email Clients
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 7.1 Ensure Use of Only Fully Supported Browsers and Email Clients (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596696,&quot;section_id&quot;:2841876,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Protect Mail Activity in Mail Is Enabled&quot;,&quot;view_level&quot;:&quot;6.2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:225,&quot;recommendation_id&quot;:4596696}},{&quot;id&quot;:4596698,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Automatic Opening of Safe Files in Safari Is Disabled&quot;,&quot;view_level&quot;:&quot;6.3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:225,&quot;recommendation_id&quot;:4596698}},{&quot;id&quot;:4596703,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit History and Remove History Items&quot;,&quot;view_level&quot;:&quot;6.3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:225,&quot;recommendation_id&quot;:4596703}},{&quot;id&quot;:4596704,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Warn When Visiting A Fraudulent Website in Safari Is Enabled&quot;,&quot;view_level&quot;:&quot;6.3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:225,&quot;recommendation_id&quot;:4596704}},{&quot;id&quot;:4596707,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Prevent Cross-site Tracking in Safari Is Enabled&quot;,&quot;view_level&quot;:&quot;6.3.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:225,&quot;recommendation_id&quot;:4596707}},{&quot;id&quot;:4596710,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Hide IP Address in Safari Setting&quot;,&quot;view_level&quot;:&quot;6.3.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:225,&quot;recommendation_id&quot;:4596710}},{&quot;id&quot;:4596711,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Advertising Privacy Protection in Safari Is Enabled&quot;,&quot;view_level&quot;:&quot;6.3.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:225,&quot;recommendation_id&quot;:4596711}},{&quot;id&quot;:4596714,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Show Full Website Address in Safari Is Enabled&quot;,&quot;view_level&quot;:&quot;6.3.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:225,&quot;recommendation_id&quot;:4596714}},{&quot;id&quot;:4596716,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit AutoFill&quot;,&quot;view_level&quot;:&quot;6.3.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:225,&quot;recommendation_id&quot;:4596716}},{&quot;id&quot;:4596718,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Pop-up Windows&quot;,&quot;view_level&quot;:&quot;6.3.9&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:225,&quot;recommendation_id&quot;:4596718}},{&quot;id&quot;:4596719,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Show Status Bar Is Enabled&quot;,&quot;view_level&quot;:&quot;6.3.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:225,&quot;recommendation_id&quot;:4596719}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>7.4</td>
+            <td>
+                                    Maintain and Enforce Network-Based URL Filters
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 7.4 Maintain and Enforce Network-Based URL Filters (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596696,&quot;section_id&quot;:2841876,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Protect Mail Activity in Mail Is Enabled&quot;,&quot;view_level&quot;:&quot;6.2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:228,&quot;recommendation_id&quot;:4596696}},{&quot;id&quot;:4596704,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Warn When Visiting A Fraudulent Website in Safari Is Enabled&quot;,&quot;view_level&quot;:&quot;6.3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:228,&quot;recommendation_id&quot;:4596704}},{&quot;id&quot;:4596710,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Hide IP Address in Safari Setting&quot;,&quot;view_level&quot;:&quot;6.3.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:228,&quot;recommendation_id&quot;:4596710}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>7.9</td>
+            <td>
+                                    Block Unnecessary File Types
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 7.9 Block Unnecessary File Types (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596698,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Automatic Opening of Safe Files in Safari Is Disabled&quot;,&quot;view_level&quot;:&quot;6.3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:233,&quot;recommendation_id&quot;:4596698}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>8.2</td>
+            <td>
+                                    Ensure Anti-Malware Software and Signatures are Updated
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 8.2 Ensure Anti-Malware Software and Signatures are Updated (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596685,&quot;section_id&quot;:2841869,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Gatekeeper Is Enabled&quot;,&quot;view_level&quot;:&quot;2.6.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:237,&quot;recommendation_id&quot;:4596685}},{&quot;id&quot;:4596712,&quot;section_id&quot;:2841864,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure XProtect Is Running and Updated&quot;,&quot;view_level&quot;:&quot;5.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:237,&quot;recommendation_id&quot;:4596712}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>8.4</td>
+            <td>
+                                    Configure Anti-Malware Scanning of Removable Devices
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 8.4 Configure Anti-Malware Scanning of Removable Devices (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596685,&quot;section_id&quot;:2841869,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Gatekeeper Is Enabled&quot;,&quot;view_level&quot;:&quot;2.6.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:239,&quot;recommendation_id&quot;:4596685}},{&quot;id&quot;:4596712,&quot;section_id&quot;:2841864,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure XProtect Is Running and Updated&quot;,&quot;view_level&quot;:&quot;5.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:239,&quot;recommendation_id&quot;:4596712}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>8.5</td>
+            <td>
+                                    Configure Devices Not To Auto-run Content
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 8.5 Configure Devices Not To Auto-run Content (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596698,&quot;section_id&quot;:2841878,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Automatic Opening of Safe Files in Safari Is Disabled&quot;,&quot;view_level&quot;:&quot;6.3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:240,&quot;recommendation_id&quot;:4596698}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>9.1</td>
+            <td>
+                                    Associate Active Ports, Services and Protocols to Asset Inventory
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 9.1 Associate Active Ports, Services and Protocols to Asset Inventory (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596657,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Computer Name Does Not Contain PII or Protected Organizational Information&quot;,&quot;view_level&quot;:&quot;2.3.3.12&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:245,&quot;recommendation_id&quot;:4596657}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>9.2</td>
+            <td>
+                                    Ensure Only Approved Ports, Protocols and Services Are Running
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 9.2 Ensure Only Approved Ports, Protocols and Services Are Running (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596616,&quot;section_id&quot;:2841854,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit iCloud Keychain&quot;,&quot;view_level&quot;:&quot;2.1.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596616}},{&quot;id&quot;:4596628,&quot;section_id&quot;:2841858,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure AirPlay Receiver Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596628}},{&quot;id&quot;:4596635,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure DVD or CD Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596635}},{&quot;id&quot;:4596637,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Screen Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596637}},{&quot;id&quot;:4596639,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure File Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596639}},{&quot;id&quot;:4596641,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Printer Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596641}},{&quot;id&quot;:4596643,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Remote Login Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596643}},{&quot;id&quot;:4596645,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Remote Management Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596645}},{&quot;id&quot;:4596647,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Remote Apple Events Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596647}},{&quot;id&quot;:4596649,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Internet Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.8&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596649}},{&quot;id&quot;:4596651,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Content Caching Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.9&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596651}},{&quot;id&quot;:4596653,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Media Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.10&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596653}},{&quot;id&quot;:4596655,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Bluetooth Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.11&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596655}},{&quot;id&quot;:4596667,&quot;section_id&quot;:2841866,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Show Bluetooth Status in Menu Bar Is Enabled&quot;,&quot;view_level&quot;:&quot;2.4.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596667}},{&quot;id&quot;:4596669,&quot;section_id&quot;:2841867,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Siri Settings&quot;,&quot;view_level&quot;:&quot;2.5.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596669}},{&quot;id&quot;:4596671,&quot;section_id&quot;:2841867,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Listen for (Siri) Is Disabled&quot;,&quot;view_level&quot;:&quot;2.5.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596671}},{&quot;id&quot;:4730709,&quot;section_id&quot;:2925527,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Share Mac Analytics Is Disabled&quot;,&quot;view_level&quot;:&quot;2.6.3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4730709}},{&quot;id&quot;:4731246,&quot;section_id&quot;:2925527,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Improve Siri &amp; Dictation Is Disabled&quot;,&quot;view_level&quot;:&quot;2.6.3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4731246}},{&quot;id&quot;:4731783,&quot;section_id&quot;:2925527,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Improve Assistive Voice Features Is Disabled&quot;,&quot;view_level&quot;:&quot;2.6.3.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4731783}},{&quot;id&quot;:4738988,&quot;section_id&quot;:2925527,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure &#039;Share with app developers&#039; Is Disabled&quot;,&quot;view_level&quot;:&quot;2.6.3.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4738988}},{&quot;id&quot;:4739244,&quot;section_id&quot;:2925527,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Share iCloud Analytics Is Disabled&quot;,&quot;view_level&quot;:&quot;2.6.3.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4739244}},{&quot;id&quot;:4596683,&quot;section_id&quot;:2841869,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Limit Ad Tracking Is Enabled&quot;,&quot;view_level&quot;:&quot;2.6.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596683}},{&quot;id&quot;:4596697,&quot;section_id&quot;:2841877,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Universal Control Settings&quot;,&quot;view_level&quot;:&quot;2.8.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596697}},{&quot;id&quot;:4596705,&quot;section_id&quot;:2841879,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Power Nap Is Disabled for Intel Macs&quot;,&quot;view_level&quot;:&quot;2.9.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596705}},{&quot;id&quot;:4596708,&quot;section_id&quot;:2841879,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Wake for Network Access Is Disabled&quot;,&quot;view_level&quot;:&quot;2.9.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596708}},{&quot;id&quot;:4596732,&quot;section_id&quot;:2841889,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Internet Accounts for Authorized Use&quot;,&quot;view_level&quot;:&quot;2.17.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596732}},{&quot;id&quot;:4596654,&quot;section_id&quot;:2841862,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Bonjour Advertising Services Is Disabled&quot;,&quot;view_level&quot;:&quot;4.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596654}},{&quot;id&quot;:4596656,&quot;section_id&quot;:2841862,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure HTTP Server Is Disabled&quot;,&quot;view_level&quot;:&quot;4.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596656}},{&quot;id&quot;:4596658,&quot;section_id&quot;:2841862,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure NFS Server Is Disabled&quot;,&quot;view_level&quot;:&quot;4.3&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596658}},{&quot;id&quot;:4596721,&quot;section_id&quot;:2841882,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Secure Keyboard Entry Terminal.app Is Enabled&quot;,&quot;view_level&quot;:&quot;6.4.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:246,&quot;recommendation_id&quot;:4596721}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>9.4</td>
+            <td>
+                                    Apply Host-based Firewalls or Port Filtering
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 9.4 Apply Host-based Firewalls or Port Filtering (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596623,&quot;section_id&quot;:2841855,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Firewall Is Enabled&quot;,&quot;view_level&quot;:&quot;2.2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:248,&quot;recommendation_id&quot;:4596623}},{&quot;id&quot;:4596625,&quot;section_id&quot;:2841855,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Firewall Stealth Mode Is Enabled&quot;,&quot;view_level&quot;:&quot;2.2.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:248,&quot;recommendation_id&quot;:4596625}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>9.5</td>
+            <td>
+                                    Implement Application Firewalls
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 9.5 Implement Application Firewalls (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596623,&quot;section_id&quot;:2841855,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Firewall Is Enabled&quot;,&quot;view_level&quot;:&quot;2.2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:249,&quot;recommendation_id&quot;:4596623}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>10.1</td>
+            <td>
+                                    Ensure Regular Automated Back Ups
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 10.1 Ensure Regular Automated Back Ups (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596659,&quot;section_id&quot;:2841863,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Backup Automatically is Enabled If Time Machine Is Enabled&quot;,&quot;view_level&quot;:&quot;2.3.4.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:251,&quot;recommendation_id&quot;:4596659}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>10.4</td>
+            <td>
+                                    Ensure Protection of Backups
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 10.4 Ensure Protection of Backups (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596661,&quot;section_id&quot;:2841863,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Time Machine Volumes Are Encrypted If Time Machine Is Enabled&quot;,&quot;view_level&quot;:&quot;2.3.4.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:254,&quot;recommendation_id&quot;:4596661}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>13.6</td>
+            <td>
+                                    Encrypt the Hard Drive of All Mobile Devices.
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 13.6 Encrypt the Hard Drive of All Mobile Devices. (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596661,&quot;section_id&quot;:2841863,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Time Machine Volumes Are Encrypted If Time Machine Is Enabled&quot;,&quot;view_level&quot;:&quot;2.3.4.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:283,&quot;recommendation_id&quot;:4596661}},{&quot;id&quot;:4596687,&quot;section_id&quot;:2841869,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure FileVault Is Enabled&quot;,&quot;view_level&quot;:&quot;2.6.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:283,&quot;recommendation_id&quot;:4596687}},{&quot;id&quot;:4596665,&quot;section_id&quot;:2841865,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Signed System Volume (SSV) Is Enabled&quot;,&quot;view_level&quot;:&quot;5.1.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:283,&quot;recommendation_id&quot;:4596665}},{&quot;id&quot;:4596689,&quot;section_id&quot;:2841874,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure all user storage APFS volumes are encrypted&quot;,&quot;view_level&quot;:&quot;5.3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:283,&quot;recommendation_id&quot;:4596689}},{&quot;id&quot;:4596691,&quot;section_id&quot;:2841874,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure all user storage CoreStorage volumes are encrypted&quot;,&quot;view_level&quot;:&quot;5.3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:283,&quot;recommendation_id&quot;:4596691}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>14.3</td>
+            <td>
+                                    Disable Workstation to Workstation Communication
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 14.3 Disable Workstation to Workstation Communication (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596645,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Remote Management Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:290,&quot;recommendation_id&quot;:4596645}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>14.6</td>
+            <td>
+                                    Protect Information through  Access Control Lists
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 14.6 Protect Information through  Access Control Lists (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596655,&quot;section_id&quot;:2841860,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Bluetooth Sharing Is Disabled&quot;,&quot;view_level&quot;:&quot;2.3.3.11&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:4596655}},{&quot;id&quot;:4596726,&quot;section_id&quot;:2841884,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Guest Access to Shared Folders Is Disabled&quot;,&quot;view_level&quot;:&quot;2.12.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:4596726}},{&quot;id&quot;:4596648,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Access to Audit Records Is Controlled&quot;,&quot;view_level&quot;:&quot;3.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:4596648}},{&quot;id&quot;:4596660,&quot;section_id&quot;:2841865,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Home Folders Are Secure&quot;,&quot;view_level&quot;:&quot;5.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:4596660}},{&quot;id&quot;:4596666,&quot;section_id&quot;:2841865,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Appropriate Permissions Are Enabled for System Wide Applications&quot;,&quot;view_level&quot;:&quot;5.1.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:4596666}},{&quot;id&quot;:4596668,&quot;section_id&quot;:2841865,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure No World Writable Folders Exist in the System Folder&quot;,&quot;view_level&quot;:&quot;5.1.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:4596668}},{&quot;id&quot;:4596670,&quot;section_id&quot;:2841865,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure No World Writable Folders Exist in the Library Folder&quot;,&quot;view_level&quot;:&quot;5.1.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:293,&quot;recommendation_id&quot;:4596670}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>14.8</td>
+            <td>
+                                    Encrypt Sensitive Information at Rest
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 14.8 Encrypt Sensitive Information at Rest (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596661,&quot;section_id&quot;:2841863,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Time Machine Volumes Are Encrypted If Time Machine Is Enabled&quot;,&quot;view_level&quot;:&quot;2.3.4.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:295,&quot;recommendation_id&quot;:4596661}},{&quot;id&quot;:4596687,&quot;section_id&quot;:2841869,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure FileVault Is Enabled&quot;,&quot;view_level&quot;:&quot;2.6.6&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:295,&quot;recommendation_id&quot;:4596687}},{&quot;id&quot;:4596665,&quot;section_id&quot;:2841865,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Signed System Volume (SSV) Is Enabled&quot;,&quot;view_level&quot;:&quot;5.1.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:295,&quot;recommendation_id&quot;:4596665}},{&quot;id&quot;:4596689,&quot;section_id&quot;:2841874,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure all user storage APFS volumes are encrypted&quot;,&quot;view_level&quot;:&quot;5.3.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:295,&quot;recommendation_id&quot;:4596689}},{&quot;id&quot;:4596691,&quot;section_id&quot;:2841874,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure all user storage CoreStorage volumes are encrypted&quot;,&quot;view_level&quot;:&quot;5.3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:295,&quot;recommendation_id&quot;:4596691}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>14.9</td>
+            <td>
+                                    Enforce Detail Logging for Access or Changes to Sensitive Data
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 14.9 Enforce Detail Logging for Access or Changes to Sensitive Data (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596642,&quot;section_id&quot;:2841861,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Security Auditing Flags For User-Attributable Events Are Configured Per Local Organizational Requirements&quot;,&quot;view_level&quot;:&quot;3.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:296,&quot;recommendation_id&quot;:4596642}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>15.4</td>
+            <td>
+                                    Disable Wireless Access on Devices if Not Required
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 15.4 Disable Wireless Access on Devices if Not Required (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596626,&quot;section_id&quot;:2841858,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure AirDrop Is Disabled When Not Actively Transferring Files&quot;,&quot;view_level&quot;:&quot;2.3.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:301,&quot;recommendation_id&quot;:4596626}},{&quot;id&quot;:4596664,&quot;section_id&quot;:2841866,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Show Wi-Fi status in Menu Bar Is Enabled&quot;,&quot;view_level&quot;:&quot;2.4.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:301,&quot;recommendation_id&quot;:4596664}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>15.5</td>
+            <td>
+                                    Limit Wireless Access on Client Devices
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 15.5 Limit Wireless Access on Client Devices (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596664,&quot;section_id&quot;:2841866,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Show Wi-Fi status in Menu Bar Is Enabled&quot;,&quot;view_level&quot;:&quot;2.4.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:302,&quot;recommendation_id&quot;:4596664}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>16.2</td>
+            <td>
+                                    Configure Centralized Point of Authentication
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 16.2 Configure Centralized Point of Authentication (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596690,&quot;section_id&quot;:2841869,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Audit Lockdown Mode&quot;,&quot;view_level&quot;:&quot;2.6.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:310,&quot;recommendation_id&quot;:4596690}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>16.7</td>
+            <td>
+                                    Establish Process for Revoking Access
+                            </td>
+            <td class="text-center"></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 16.7 Establish Process for Revoking Access (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596672,&quot;section_id&quot;:2841868,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Password Account Lockout Threshold Is Configured&quot;,&quot;view_level&quot;:&quot;5.2.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:315,&quot;recommendation_id&quot;:4596672}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>16.9</td>
+            <td>
+                                    Disable Dormant Accounts
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 16.9 Disable Dormant Accounts (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596684,&quot;section_id&quot;:2841868,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Password Age Is Configured&quot;,&quot;view_level&quot;:&quot;5.2.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:317,&quot;recommendation_id&quot;:4596684}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+            <tr>
+            <td>16.11</td>
+            <td>
+                                    Lock Workstation Sessions After Inactivity
+                            </td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#6CBD54;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#F08B0E;"></span></td>
+            <td class="text-center"><span class="fa fa-circle" aria-hidden="true" style="color:#02AFBD;"></span></td>
+            <td class="text-center">
+                <wb-recommendations-linked-to-control-modal
+                        title="CIS Control: 16.11 Lock Workstation Sessions After Inactivity (Version 7)"
+                        recommendations="[{&quot;id&quot;:4596694,&quot;section_id&quot;:2841875,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Screen Saver Corners Are Secure&quot;,&quot;view_level&quot;:&quot;2.7.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:319,&quot;recommendation_id&quot;:4596694}},{&quot;id&quot;:4596700,&quot;section_id&quot;:2841880,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure the OS Is Not Active When Resuming from Standby (Intel)&quot;,&quot;view_level&quot;:&quot;2.9.1.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:319,&quot;recommendation_id&quot;:4596700}},{&quot;id&quot;:4596701,&quot;section_id&quot;:2841880,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Sleep and Display Sleep Is Enabled on Apple Silicon Devices&quot;,&quot;view_level&quot;:&quot;2.9.1.2&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:319,&quot;recommendation_id&quot;:4596701}},{&quot;id&quot;:4596713,&quot;section_id&quot;:2841881,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure an Inactivity Interval of 20 Minutes Or Less for the Screen Saver Is Enabled&quot;,&quot;view_level&quot;:&quot;2.10.1&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:319,&quot;recommendation_id&quot;:4596713}},{&quot;id&quot;:4596693,&quot;section_id&quot;:2841864,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure the Sudo Timeout Period Is Set to Zero&quot;,&quot;view_level&quot;:&quot;5.4&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:319,&quot;recommendation_id&quot;:4596693}},{&quot;id&quot;:4596695,&quot;section_id&quot;:2841864,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure a Separate Timestamp Is Enabled for Each User\/tty Combo&quot;,&quot;view_level&quot;:&quot;5.5&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:319,&quot;recommendation_id&quot;:4596695}},{&quot;id&quot;:4596702,&quot;section_id&quot;:2841864,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure an Administrator Account Cannot Login to Another User&#039;s Active and Locked Session&quot;,&quot;view_level&quot;:&quot;5.7&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:319,&quot;recommendation_id&quot;:4596702}},{&quot;id&quot;:4907350,&quot;section_id&quot;:2841864,&quot;benchmark_id&quot;:18636,&quot;title&quot;:&quot;Ensure Logging Is Enabled for Sudo&quot;,&quot;view_level&quot;:&quot;5.11&quot;,&quot;pivot&quot;:{&quot;control_id&quot;:319,&quot;recommendation_id&quot;:4907350}}]">
+                </wb-recommendations-linked-to-control-modal>
+            </td>
+        </tr>
+        </tbody>
+</table>
+                </div>
+            
+            </div>
+					</div>
+				</div>
+				<footer>
+											<div class="footer-bottom">
+	<div class="container-fluid inner">
+		<hr>
+		<div class="row">
+			<div class="col-lg-4 col-lg-offset-4">
+				<p>&copy; 2025 <a href="http://cisecurity.org" target="_blank" rel="noopener noreferrer"><img src="/images/Logo_Text_Stacked_TMR.png" alt="CIS LOGO" height="50"></a></p></div>
+			<div class="col-lg-4"></div>
+		</div>
+	</div>
+</div>
+									</footer>
+			</div>
+					</div>
+			</div>
+		</div>
+	<div id="scripts">
+    <script  nonce="hUul8VHjrfiwqEGMv7q9ZKFL5D0HiGN3"  src="/js/all.js?id=086be15bf1c2488117979fc4c3501769"></script>
+    <script  nonce="hUul8VHjrfiwqEGMv7q9ZKFL5D0HiGN3"  src="/js/app.js?id=cc9146ee82a0d922d7ebf611b71e1f3a"></script>
+</div>
+<script  nonce="hUul8VHjrfiwqEGMv7q9ZKFL5D0HiGN3" >
+	var isUserLoggedIn = true; 
+		
+</script>
+</body>
+</html>
