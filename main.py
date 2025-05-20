@@ -145,7 +145,7 @@ def extract_cis_info(control_title: str):
 
 
 def json_to_csv(input_file_path):
-  df = pd.read_json(input_file_path)
+  df = pd.read_json(input_file_path, dtype=object)
   df['applicable_profiles'] = df['applicable_profiles'].apply(
     lambda profiles: ', '.join([profile['title'] for profile in profiles if 'title' in profile])
   )
@@ -155,10 +155,9 @@ def json_to_csv(input_file_path):
   # )
 
   # excel
-  # df['CIS_Segment'] = df['CIS_Segment'].apply(lambda x: f"'{x}")
-  # df['view_level'] = df['view_level'].apply(lambda x: f"'{x}")
+  df['control_id'] = df['control_id'].apply(lambda x: f"'{x}")
+  df['view_level'] = df['view_level'].apply(lambda x: f"'{x}")
 
-  # print(df['applicable_profiles'])
   df.to_csv(f"{input_file_path}.csv", encoding='utf-8', quoting=csv.QUOTE_ALL) 
 
 
@@ -168,10 +167,12 @@ if __name__ == '__main__':
   args = parser.parse_args()
 
 
+  json_path = f'{args.file}.json'
+  json_to_csv(json_path)
+  sys.exit(0)
+
   # HTML ファイルからCIS Controls Version 8のデータを抽出
   mapped_data = parse_cis_controls(args.file)
-  # print(json.dumps(mapped_data, indent=2))
-  # sys.exit(0)
 
   # mapped_data = extract_control_data(args.file, "version_8")
 
@@ -185,7 +186,7 @@ if __name__ == '__main__':
   json_path = f'{args.file}.json'
   with open(json_path, 'w') as fw:
     fw.write(json.dumps(all_json, indent=2))
-    
+  
   json_to_csv(json_path)
 
 
