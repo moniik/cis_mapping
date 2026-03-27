@@ -110,17 +110,20 @@ def parse_recommendation(url: str):
   html_content = r.text
 
   soup = BeautifulSoup(html_content, 'html.parser')
-  applicable_profiles_raw = soup.find('wb-recommendation-profiles')
+
+  def get_wb_data(attribute):
+    tag = soup.find('wb-recommendation-data', {'attribute': attribute})
+    return tag.get('text', '').strip() if tag else ''
 
   recommendation_json = {
-    "assessment_status": soup.find('span', {'id': 'automated_scoring-recommendation-data'}).get_text().strip(),
-    "applicable_profiles": json.loads(applicable_profiles_raw.get('profiles')),
-    "description": soup.find('div', {'id': 'description-recommendation-data'}).get_text().strip(),
-    "rationale_statement": soup.find('div', {'id': 'rationale_statement-recommendation-data'}).get_text().strip(),
-    "impact_statement": soup.find('div', {'id': 'impact_statement-recommendation-data'}).get_text().strip(),
-    "audit_procedure": soup.find('div', {'id': 'audit_procedure-recommendation-data'}).get_text().strip(),
-    "remediation_procedure": soup.find('div', {'id': 'remediation_procedure-recommendation-data'}).get_text().strip(),
-    "default_value": soup.find('div', {'id': 'default_value-recommendation-data'}).get_text().strip(),
+    "assessment_status": get_wb_data('automated_scoring'),
+    "applicable_profiles": get_wb_data('profiles'),
+    "description": get_wb_data('description'),
+    "rationale_statement": get_wb_data('rationale_statement'),
+    "impact_statement": get_wb_data('impact_statement'),
+    "audit_procedure": get_wb_data('audit_procedure'),
+    "remediation_procedure": get_wb_data('remediation_procedure'),
+    "default_value": get_wb_data('default_value'),
   }
 
   return recommendation_json
@@ -146,9 +149,12 @@ def extract_cis_info(control_title: str):
 
 def json_to_csv(input_file_path):
   df = pd.read_json(input_file_path, dtype=object)
-  df['applicable_profiles'] = df['applicable_profiles'].apply(
-    lambda profiles: ', '.join([profile['title'] for profile in profiles if 'title' in profile])
-  )
+  def normalize_profiles(profiles):
+    if isinstance(profiles, list):
+      return ', '.join([p['title'] for p in profiles if 'title' in p])
+    return profiles if isinstance(profiles, str) else ''
+
+  df['applicable_profiles'] = df['applicable_profiles'].apply(normalize_profiles)
 
   # df[['CIS_Segment', 'CIS_Title']] = df['control_title'].apply(
   #   lambda x: pd.Series(extract_cis_info(x))
@@ -163,30 +169,50 @@ def json_to_csv(input_file_path):
 
 if __name__ == '__main__':
   parser = argparse.ArgumentParser(description='parse CIS benchmark/control mapping')
-  parser.add_argument('-f', '--file', type=str, help='Path to the PDF file')
+  parser.add_argument('-f', '--file', type=str, help='Path to the HTML or JSON file')
+  parser.add_argument('--fetch', action='store_true', help='Fetch recommendations from JSON file')
+  parser.add_argument('--csv', action='store_true', help='Convert existing JSON file to CSV')
   args = parser.parse_args()
 
+  if args.csv:
+    json_to_csv(args.file)
+    sys.exit(0)
 
-  json_path = f'{args.file}.json'
-  json_to_csv(json_path)
-  sys.exit(0)
+  if args.fetch:
+    # JSONファイルからURLを読み込んでrecommendationを取得
+    with open(args.file, 'r') as f:
+      mapped_data = json.load(f)
+    print(f"Loaded {len(mapped_data)} records from JSON")
+
+    all_json = []
+    for i, data in enumerate(mapped_data, 1):
+      print(f"[{i}/{len(mapped_data)}] {data.get('url')}")
+      recommendation_json = parse_recommendation(data.get('url'))
+      merged_json = {**data, **recommendation_json}
+      all_json.append(merged_json)
+
+    json_path = f'{args.file}.fetched.json'
+    with open(json_path, 'w') as fw:
+      fw.write(json.dumps(all_json, indent=2, ensure_ascii=False))
+
+    json_to_csv(json_path)
+    sys.exit(0)
 
   # HTML ファイルからCIS Controls Version 8のデータを抽出
   mapped_data = parse_cis_controls(args.file)
-
-  # mapped_data = extract_control_data(args.file, "version_8")
+  print(f"Parsed {len(mapped_data)} records from HTML")
 
   all_json = []
-  for data in mapped_data:
-    # https://workbench.cisecurity.org/sections/2498516/recommendations/4031466
+  for i, data in enumerate(mapped_data, 1):
+    print(f"[{i}/{len(mapped_data)}] {data.get('url')}")
     recommendation_json = parse_recommendation(data.get('url'))
     merged_json = {**data, **recommendation_json}
     all_json.append(merged_json)
-  
+
   json_path = f'{args.file}.json'
   with open(json_path, 'w') as fw:
-    fw.write(json.dumps(all_json, indent=2))
-  
+    fw.write(json.dumps(all_json, indent=2, ensure_ascii=False))
+
   json_to_csv(json_path)
 
 
@@ -209,4 +235,6 @@ https://workbench.cisecurity.org/benchmarks/11843/controls
 
 # CIS Google Cloud Platform Foundation Benchmark v2.0.0 - 03-29-2024
 https://workbench.cisecurity.org/benchmarks/9562/controls#
+
+https://workbench.cisecurity.org/benchmarks/19478/controls#
 """
